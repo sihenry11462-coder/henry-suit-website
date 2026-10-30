@@ -1,14 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Henry Bespoke — Custom Suiting</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Henry Bespoke — Custom Suiting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0c0b0a;
+    --ink-soft:#171512;
+    --paper:#f5f2ec;
+    --paper-dim:#d9d3c8;
+    --brass:#b08d57;
+    --muted:#8a8178;
+    --line:rgba(245,242,236,.14);
+    --serif:'Cormorant Garamond',Georgia,serif;
+    --sans:'Inter',-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:var(--sans);
+    font-weight:300;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img,svg{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--brass);color:var(--ink)}
+  .wrap{width:min(1180px,90vw);margin-inline:auto}
+  
+  .eyebrow{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);font-weight:500;display:block;margin-bottom:1.4rem}
+  h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.1;letter-spacing:-.01em}
+  h1{font-size:clamp(2.8rem,7vw,5.5rem)}
+  h2{font-size:clamp(2rem,4vw,3.2rem);margin-bottom:1.2rem}
+  h3{font-size:1.45rem;font-weight:400;margin-bottom:.5rem}
+  p{color:var(--paper-dim);max-width:56ch}
+
+  .btn{display:inline-block;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;padding:1.05rem 2.4rem;border:1px solid var(--brass);color:var(--paper);transition:background .35s,color .35s;cursor:pointer}
+  .btn:hover{background:var(--brass);color:var(--ink)}
+  .btn--ghost{border-color:var(--line)}
+  .btn--ghost:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+
+  .nav{position:fixed;inset:0 0 auto 0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.6rem 5vw;transition:background .4s,padding .4s,border-color .4s;border-bottom:1px solid transparent}
+  .nav.is-stuck{background:rgba(12,11,10,.92);backdrop-filter:blur(14px);padding:1rem 5vw;border-bottom-color:var(--line)}
+  .brand{font-family:var(--serif);font-size:1.35rem;letter-spacing:.16em;text-transform:uppercase}
+  .brand span{color:var(--brass)}
+  .nav-links{display:flex;gap:2.6rem;align-items:center}
+  .nav-links a{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--paper-dim);transition:color .3s}
+  .nav-links a:hover{color:var(--brass)}
+  .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:.4rem}
+  .nav-toggle span{display:block;width:24px;height:1px;background:var(--paper);margin:5px 0;transition:.3s}
+
+  .hero{min-height:100svh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:3rem;padding:8rem 5vw 5rem;position:relative}
+  .hero::after{content:"";position:absolute;inset:2rem;border:1px solid var(--line);pointer-events:none}
+  .hero-copy{position:relative;z-index:2}
+  .hero h1 em{font-style:italic;color:var(--brass)}
+  .hero p{margin:1.8rem 0 2.8rem;font-size:1.02rem}
+  .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+  .hero-figure{display:flex;justify-content:center;align-items:center;position:relative}
+  .hero-figure svg{width:min(100%,380px);color:#22201c;filter:drop-shadow(0 30px 60px rgba(0,0,0,.6));animation:rise 1.6s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+  .hero-figure::before{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(176,141,87,.16),transparent 68%);filter:blur(10px)}
+
+  section{padding:7rem 0}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-bottom:4rem;flex-wrap:wrap}
+  .section-head p{max-width:38ch;font-size:.95rem}
+
+  .collection{border-top:1px solid var(--line)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem}
+  .card{cursor:pointer}
+  .card-visual{position:relative;aspect-ratio:4/5;display:grid;place-items:center;overflow:hidden;margin-bottom:1.5rem;background:#1a1815}
+  .card-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,transparent 40%,rgba(0,0,0,.45));transition:opacity .5s}
+  .card:hover .card-visual::after{opacity:.5}
+  .card-visual svg{width:58%;color:rgba(255,255,255,.9);transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+  .card:hover .card-visual svg{transform:translateY(-8px) scale(1.04)}
+  .c1 .card-visual{background:linear-gradient(150deg,#3a3733,#1c1a17)}
+  .c2 .card-visual{background:linear-gradient(150deg,#232f42,#10151d)}
+  .c3 .card-visual{background:linear-gradient(150deg,#3d3a2a,#1b1a13)}
+  .c4 .card-visual{background:linear-gradient(150deg,#2a2a2e,#0e0e10)}
+  .card-meta{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+  .card-meta h3{margin:0}
+  .card-price{font-size:.82rem;letter-spacing:.08em;color:var(--brass)}
+  .card-desc{font-size:.85rem;color:var(--muted);margin-top:.35rem}
+
+  .craft{border-top:1px solid var(--line);background:var(--ink-soft)}
+  .craft-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:3.5rem}
+  .craft-item .num{font-family:var(--serif);font-size:2.4rem;color:var(--brass);opacity:.55;display:block;margin-bottom:.8rem}
+  .craft-item p{font-size:.92rem}
+
+  .quote{text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:8rem 0}
+  .quote blockquote{font-family:var(--serif);font-size:clamp(1.6rem,3.4vw,2.6rem);font-weight:300;font-style:italic;line-height:1.35;max-width:20ch;margin:0 auto 2rem}
+  .quote cite{font-style:normal;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+  .field{margin-bottom:1.4rem}
+  label{display:block;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
+  input,textarea,select{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--paper);font-family:var(--sans);font-size:.95rem;font-weight:300;padding:.7rem 0;transition:border-color .3s}
+  input:focus,textarea:focus,select:focus{outline:none;border-bottom-color:var(--brass)}
+  textarea{resize:vertical;min-height:100px}
+  select option{background:var(--ink)}
+  .form-note{font-size:.78rem;color:var(--muted);margin-top:1.4rem;min-height:1.2em}
+  .contact-info dl{margin-top:2.5rem}
+  .contact-info dt{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin-top:1.8rem}
+  .contact-info dd{color:var(--paper-dim);font-size:.95rem;margin-top:.3rem}
+
+  footer{border-top:1px solid var(--line);padding:3rem 0;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;font-size:.75rem;color:var(--muted);letter-spacing:.06em}
+  footer a:hover{color:var(--brass)}
+
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr;text-align:left;padding-top:7rem}
+    .hero::after{inset:1rem}
+    .hero-figure{order:-1;margin-bottom:1rem}
+    .hero-figure svg{width:min(62%,220px)}
+    .contact-grid{grid-template-columns:1fr;gap:3.5rem}
+  }
+  @media (max-width:680px){
+    .nav-toggle{display:block}
+    .nav-links{position:fixed;inset:0;flex-direction:column;justify-content:center;background:rgba(12,11,10,.98);gap:2rem;transform:translateY(-100%);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+    .nav-links.open{transform:none}
+    .nav-links a{font-size:.9rem}
+    .form-row{grid-template-columns:1fr}
+    section{padding:4.5rem 0}
+    .hero{padding-bottom:3rem}
+  }
+</style>
 </head>
 <body>
 
-  <h1>Suits cut for one man only.</h1>
-  <p>Three fittings. Six weeks. Made by hand in Nairobi.</p>
+<!-- NAVIGATION -->
+<header class="nav" id="nav">
+  <a href="#" class="brand">Henry <span>Bespoke</span></a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#collection">Collection</a>
+    <a href="#craft">The Craft</a>
+    <a href="#contact">Visit</a>
+    <a href="#contact" class="btn btn--ghost" style="padding:.7rem 1.6rem;font-size:.66rem">Book a Fitting</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
 
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">Est. 1987 · Nairobi</span>
+    <h1>Suits cut for<br><em>one man only.</em></h1>
+    <p>Three fittings. Two hundred measurements. A single suit that moves the way you do — made by hand, over six weeks, in our workshop.</p>
+    <div class="hero-actions">
+      <a href="#collection" class="btn">Explore the Collection</a>
+      <a href="#contact" class="btn btn--ghost">Book a Consultation</a>
+    </div>
+  </div>
+  <div class="hero-figure" aria-hidden="true">
+    <svg viewBox="0 0 200 300" fill="none">
+      <path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/>
+      <path d="M100 44 L66 56 L86 152 L100 112 L114 152 L134 56Z" fill="#0c0b0a" opacity=".55"/>
+      <path d="M100 44 L88 152 L100 206 L112 152Z" fill="#f5f2ec" opacity=".13"/>
+      <circle cx="100" cy="150" r="3" fill="#b08d57" opacity=".8"/>
+      <circle cx="100" cy="178" r="3" fill="#b08d57" opacity=".8"/>
+    </svg>
+  </div>
+</section>
+
+<!-- COLLECTION SECTION -->
+<section class="collection" id="collection">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">The Collection</span>
+        <h2>Four houses, one standard</h2>
+      </div>
+      <p>Each silhouette is offered in a house cloth and cut to your frame. Nothing off the peg.</p>
+    </div>
+    <div class="grid">
+      <article class="card c1">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/><path d="M100 44 L66 56 L86 152 L100 112 L114 152 L134 56Z" fill="#0c0b0a" opacity=".5"/></svg></div>
+        <div class="card-meta"><h3>The Regent</h3><span class="card-price">from $1,290</span></div>
+        <p class="card-desc">Single-breasted, notch lapel — charcoal worsted wool.</p>
+      </article>
+      <article class="card c2">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/><path d="M100 44 L66 56 L86 152 L100 112 L114 152 L134 56Z" fill="#0c0b0a" opacity=".5"/></svg></div>
+        <div class="card-meta"><h3>The Meridian</h3><span class="card-price">from $1,480</span></div>
+        <p class="card-desc">Double-breasted, peak lapel — midnight navy flannel.</p>
+      </article>
+      <article class="card c3">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/><path d="M100 44 L66 56 L86 152 L100 112 L114 152 L134 56Z" fill="#0c0b0a" opacity=".5"/></svg></div>
+        <div class="card-meta"><h3>The Ashford</h3><span class="card-price">from $1,650</span></div>
+        <p class="card-desc">Three-piece, soft shoulder — olive herringbone tweed.</p>
+      </article>
+      <article class="card c4">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/><path d="M100 44 L66 56 L86 152 L100 112 L114 152 L134 56Z" fill="#0c0b0a" opacity=".5"/></svg></div>
+        <div class="card-meta"><h3>The Coventry</h3><span class="card-price">from $1,890</span></div>
+        <p class="card-desc">Evening tuxedo, grosgrain facing — black barathea.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CRAFT SECTION -->
+<section class="craft" id="craft">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">The Craft</span>
+        <h2>Why six weeks</h2>
+      </div>
+      <p>A machine can sew a jacket in an hour. It cannot decide how it should hang.</p>
+    </div>
+    <div class="craft-grid">
+      <div class="craft-item">
+        <span class="num">01</span>
+        <h3>Cloth</h3>
+        <p>We buy from four mills in Biella and Huddersfield. You'll feel every bolt in the shop before a single cut is made.</p>
+      </div>
+      <div class="craft-item">
+        <span class="num">02</span>
+        <h3>Construction</h3>
+        <p>Floating canvas, hand-padded lapels, and a shoulder set by eye. Roughly forty hours of handwork per jacket.</p>
+      </div>
+      <div class="craft-item">
+        <span class="num">03</span>
+        <h3>Fit</h3>
+        <p>Three fittings, six weeks apart. We adjust until the suit disappears — until you forget you're wearing it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE SECTION -->
+<section class="quote">
+  <div class="wrap">
+    <blockquote>“A suit should be felt, never seen.”</blockquote>
+    <cite>— Henry, Founder</cite>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <span class="eyebrow">Visit the Atelier</span>
+        <h2>Book a fitting</h2>
+        <p>Consultations run ninety minutes. No obligation, no rush — we'll talk cloth, cut, and occasion.</p>
+        <form id="bookingForm" novalidate style="margin-top:2rem;">
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required placeholder="Your name" />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required placeholder="you@example.com" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="interest">Interested in</label>
+            <select id="interest" name="interest">
+              <option>Bespoke suit</option>
+              <option>Made-to-measure</option>
+              <option>Evening wear</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Anything we should know</label>
+            <textarea id="message" name="message" placeholder="Occasion, timeline, questions…"></textarea>
+          </div>
+          <button type="submit" class="btn">Request an Appointment</button>
+          <p class="form-note" id="formNote" role="status"></p>
+        </form>
+      </div>
+      <div class="contact-info">
+        <span class="eyebrow">Details</span>
+        <h2>Find us</h2>
+        <dl>
+          <dt>Atelier</dt>
+          <dd>42 Kenyatta Avenue<br>Nairobi, Kenya</dd>
+          <dt>Hours</dt>
+          <dd>Tue – Sat, 10:00 – 18:00<br>By appointment only</dd>
+          <dt>Telephone</dt>
+          <dd><a href="tel:+2540703670456">+254 0703 670 456</a></dd>
+          <dt>Email</dt>
+          <dd><a href="mailto:sihenry11462@gmail.com">sihenry11462@gmail.com</a></dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="wrap">
+  <footer>
+    <span>© <span id="year"></span> Henry Bespoke. Made by hand in Nairobi.</span>
+    <span style="display:flex;gap:1.6rem">
+      <a href="#">Instagram</a>
+      <a href="#">Journal</a>
+      <a href="#">Care Guide</a>
+    </span>
+  </footer>
+</div>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('is-stuck', window.scrollY > 40));
+
+  const toggle = document.getElementById('navToggle');
+  const links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+  const form = document.getElementById('bookingForm');
+  const note = document.getElementById('formNote');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name  = form.name.value.trim();
+    const email = form.email.value.trim();
+    if (!name || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+      note.textContent = 'Please add your name and a valid email.';
+      note.style.color = '#c98a6b';
+      return;
+    }
+    note.textContent = `Thank you, ${name.split(' ')[0]}. We'll be in touch within one working day.`;
+    note.style.color = '#b08d57';
+    form.reset();
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
