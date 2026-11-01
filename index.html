@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+c<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Henry Bespoke — Made to Measure Suits</title>
+<title>Henry Bespoke — Premium Turkish MTM Suits</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -42,7 +42,7 @@
   h3{font-size:1.45rem;font-weight:400;margin-bottom:.5rem}
   p{color:var(--paper-dim);max-width:56ch}
 
-  .btn{display:inline-block;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;padding:1.05rem 2.4rem;border:1px solid var(--brass);color:var(--paper);transition:background .35s,color .35s;cursor:pointer}
+  .btn{display:inline-block;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;padding:1.05rem 2.4rem;border:1px solid var(--brass);color:var(--paper);transition:background .35s,color .35s;cursor:pointer;text-align:center}
   .btn:hover{background:var(--brass);color:var(--ink)}
   .btn--ghost{border-color:var(--line)}
   .btn--ghost:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}
@@ -57,7 +57,7 @@
   .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:.4rem}
   .nav-toggle span{display:block;width:24px;height:1px;background:var(--paper);margin:5px 0;transition:.3s}
 
-  .hero{min-height:100svh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:3rem;padding:8rem 5vw 5rem;position:relative}
+  .hero{min-height:90svh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:3rem;padding:8rem 5vw 5rem;position:relative}
   .hero::after{content:"";position:absolute;inset:2rem;border:1px solid var(--line);pointer-events:none}
   .hero-copy{position:relative;z-index:2}
   .hero h1 em{font-style:italic;color:var(--brass)}
@@ -73,30 +73,28 @@
   .section-head p{max-width:38ch;font-size:.95rem}
 
   .collection{border-top:1px solid var(--line)}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem}
-  .card{cursor:pointer}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem}
+  .card{cursor:pointer;background:var(--ink-soft);border:1px solid var(--line);padding:1.5rem;transition:transform .3s}
+  .card:hover{transform:translateY(-5px);border-color:var(--brass)}
   .card-visual{position:relative;aspect-ratio:4/5;display:grid;place-items:center;overflow:hidden;margin-bottom:1.5rem;background:#1a1815}
-  .card-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,transparent 40%,rgba(0,0,0,.45));transition:opacity .5s}
-  .card:hover .card-visual::after{opacity:.5}
-  .card-visual svg{width:58%;color:rgba(255,255,255,.9);transition:transform .7s cubic-bezier(.2,.8,.2,1)}
-  .card:hover .card-visual svg{transform:translateY(-8px) scale(1.04)}
-  .c1 .card-visual{background:linear-gradient(150deg,#3a3733,#1c1a17)}
-  .c2 .card-visual{background:linear-gradient(150deg,#232f42,#10151d)}
-  .c3 .card-visual{background:linear-gradient(150deg,#3d3a2a,#1b1a13)}
-  .c4 .card-visual{background:linear-gradient(150deg,#2a2a2e,#0e0e10)}
+  .card-visual svg{width:50%;color:rgba(255,255,255,.7);transition:transform .7s}
+  .card:hover .card-visual svg{transform:scale(1.05)}
   .card-meta{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
-  .card-meta h3{margin:0}
-  .card-price{font-size:.82rem;letter-spacing:.08em;color:var(--brass)}
+  .card-meta h3{margin:0;font-size:1.2rem}
+  .card-price{font-size:.9rem;letter-spacing:.08em;color:var(--brass);font-weight:500}
   .card-desc{font-size:.85rem;color:var(--muted);margin-top:.35rem}
+  .old-price{text-decoration:line-through;color:var(--muted);font-size:.8rem;margin-right:.5rem}
 
-  .craft{border-top:1px solid var(--line);background:var(--ink-soft)}
+  .craft{border-top:1px solid var(--line);background:#12110f}
   .craft-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:3.5rem}
   .craft-item .num{font-family:var(--serif);font-size:2.4rem;color:var(--brass);opacity:.55;display:block;margin-bottom:.8rem}
   .craft-item p{font-size:.92rem}
 
-  .quote{text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:8rem 0}
-  .quote blockquote{font-family:var(--serif);font-size:clamp(1.6rem,3.4vw,2.6rem);font-weight:300;font-style:italic;line-height:1.35;max-width:20ch;margin:0 auto 2rem}
-  .quote cite{font-style:normal;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+  .sizing-section{border-top:1px solid var(--line)}
+  .size-table{width:100%;border-collapse:collapse;margin-top:2rem;max-width:500px;}
+  .size-table th, .size-table td{border:1px solid var(--line);padding:1rem;text-align:left;font-size:.9rem;}
+  .size-table th{color:var(--brass);font-weight:500;text-transform:uppercase;letter-spacing:.1em;font-size:.7rem;}
+  .size-table tr:nth-child(even){background:rgba(255,255,255,.02);}
 
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
   .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
@@ -104,13 +102,9 @@
   label{display:block;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
   input,textarea,select{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--paper);font-family:var(--sans);font-size:.95rem;font-weight:300;padding:.7rem 0;transition:border-color .3s}
   input:focus,textarea:focus,select:focus{outline:none;border-bottom-color:var(--brass)}
-  textarea{resize:vertical;min-height:100px}
+  textarea{resize:vertical;min-height:80px}
   select option{background:var(--ink)}
-  .form-note{font-size:.78rem;color:var(--muted);margin-top:1.4rem;min-height:1.2em}
-  .contact-info dl{margin-top:2.5rem}
-  .contact-info dt{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin-top:1.8rem}
-  .contact-info dd{color:var(--paper-dim);font-size:.95rem;margin-top:.3rem}
-
+  
   footer{border-top:1px solid var(--line);padding:3rem 0;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;font-size:.75rem;color:var(--muted);letter-spacing:.06em}
   footer a:hover{color:var(--brass)}
 
@@ -134,29 +128,27 @@
 </head>
 <body>
 
-<!-- NAVIGATION -->
 <header class="nav" id="nav">
-  <a href="#" class="brand">Henry <span>MTM</span></a>
+  <a href="#" class="brand">Henry <span>Bespoke</span></a>
   <nav class="nav-links" id="navLinks">
     <a href="#collection">Collection</a>
-    <a href="#craft">The Process</a>
-    <a href="#contact">Visit</a>
-    <a href="#contact" class="btn btn--ghost" style="padding:.7rem 1.6rem;font-size:.66rem">Get Measured</a>
+    <a href="#process">How It Works</a>
+    <a href="#sizing">Sizing</a>
+    <a href="#order" class="btn btn--ghost" style="padding:.7rem 1.6rem;font-size:.66rem">Order Now</a>
   </nav>
   <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </header>
 
-<!-- HERO SECTION -->
 <section class="hero">
   <div class="hero-copy">
-    <span class="eyebrow">Imported from Turkey · Nairobi</span>
+    <span class="eyebrow">Premium Turkish Wool · Delivered to You</span>
     <h1>Made to Measure.<br><em>Perfectly Fitted.</em></h1>
-    <p>Experience the finest Turkish textiles. We take your exact measurements, select premium fabrics imported directly from Turkey, and craft a suit tailored perfectly to your body.</p>
+    <p>Experience the finest 100% Turkish wool. We take your measurements, adjust the suit to your exact body shape, and deliver it directly to your home or office.</p>
     <div class="hero-actions">
-      <a href="#collection" class="btn">View Fabrics</a>
-      <a href="#contact" class="btn btn--ghost">Book a Measurement</a>
+      <a href="#collection" class="btn">View Collection</a>
+      <a href="#process" class="btn btn--ghost">How It Works</a>
     </div>
   </div>
   <div class="hero-figure" aria-hidden="true">
@@ -170,173 +162,2936 @@
   </div>
 </section>
 
-<!-- COLLECTION SECTION -->
 <section class="collection" id="collection">
   <div class="wrap">
     <div class="section-head">
       <div>
         <span class="eyebrow">The Collection</span>
-        <h2>Premium Turkish Fabrics</h2>
+        <h2>100% Turkish Wool</h2>
       </div>
-      <p>Choose from our curated selection of imported Turkish wools, cottons, and blends.</p>
+      <p>Select from our premium imported fabrics. Available in 2-piece and 3-piece sets.</p>
     </div>
     <div class="grid">
-      <article class="card c1">
-        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/><path d="M100 44 L66 56 L86 152 L100 112 L114 152 L134 56Z" fill="#0c0b0a" opacity=".5"/></svg></div>
-        <div class="card-meta"><h3>The Bosphorus</h3><span class="card-price">from $450</span></div>
-        <p class="card-desc">Single-breasted, notch lapel — charcoal Turkish wool.</p>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Bosphorus</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Charcoal Wool</p>
       </article>
-      <article class="card c2">
-        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/><path d="M100 44 L66 56 L86 152 L100 112 L114 152 L134 56Z" fill="#0c0b0a" opacity=".5"/></svg></div>
-        <div class="card-meta"><h3>The Anatolian</h3><span class="card-price">from $520</span></div>
-        <p class="card-desc">Double-breasted, peak lapel — midnight navy flannel.</p>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Anatolian</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Midnight Navy</p>
       </article>
-      <article class="card c3">
-        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/><path d="M100 44 L66 56 L86 152 L100 112 L114 152 L134 56Z" fill="#0c0b0a" opacity=".5"/></svg></div>
-        <div class="card-meta"><h3>The Cappadocia</h3><span class="card-price">from $480</span></div>
-        <p class="card-desc">Three-piece, soft shoulder — olive herringbone tweed.</p>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Istanbul</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Black Wool</p>
       </article>
-      <article class="card c4">
-        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/><path d="M100 44 L66 56 L86 152 L100 112 L114 152 L134 56Z" fill="#0c0b0a" opacity=".5"/></svg></div>
-        <div class="card-meta"><h3>The Istanbul</h3><span class="card-price">from $590</span></div>
-        <p class="card-desc">Evening tuxedo, grosgrain facing — black Turkish wool.</p>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Cappadocia</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Olive Herringbone</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Ankara</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Grey Wool</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Izmir</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Light Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Antalya</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Deep Blue</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Troy</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Brown Tweed</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Bodrum</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Summer Beige</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Ephesus</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Navy Pinstripe</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Konya</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Charcoal Pinstripe</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Mardin</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Classic Black</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Trabzon</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Slate Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Gaziantep</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Textured Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Van</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Midnight Blue</p>
       </article>
     </div>
   </div>
 </section>
 
-<!-- PROCESS SECTION -->
-<section class="craft" id="craft">
+<section class="craft" id="process">
   <div class="wrap">
     <div class="section-head">
       <div>
         <span class="eyebrow">The Process</span>
         <h2>How Made-to-Measure Works</h2>
       </div>
-      <p>No endless fittings. Just a perfect fit, delivered efficiently.</p>
+      <p>No shop visits required. We bring the perfect fit to your doorstep.</p>
     </div>
     <div class="craft-grid">
       <div class="craft-item">
         <span class="num">01</span>
-        <h3>Precise Measurement</h3>
-        <p>We take over 20 precise measurements to ensure your suit fits your exact body shape, not just a standard size.</p>
+        <h3>Choose & Measure</h3>
+        <p>Select your suit. If you know your exact sizes (Height, Waist, Coat), you provide them. If you only know your waist size, we will recommend the best fit for you using our chart below.</p>
       </div>
       <div class="craft-item">
         <span class="num">02</span>
-        <h3>Turkish Textiles</h3>
-        <p>Select from our premium catalog of fabrics imported directly from Turkey's finest mills. Exceptional quality and drape.</p>
+        <h3>The Tailoring</h3>
+        <p>We take your measurements (or your recommended size) and ensure the suit is perfectly adjusted to your body shape before it is finalized.</p>
       </div>
       <div class="craft-item">
         <span class="num">03</span>
-        <h3>Delivered to You</h3>
-        <p>Your measurements are sent to our master tailors. Within 2–3 weeks, your custom suit arrives, ready to wear.</p>
+        <h3>Home or Office Delivery</h3>
+        <p>Once perfectly tailored, your 100% Turkish wool suit is delivered directly to your home or workplace.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- QUOTE SECTION -->
-<section class="quote">
+<section class="sizing-section" id="sizing">
   <div class="wrap">
-    <blockquote>“Turkish fabric. Your exact measurements. A perfect fit.”</blockquote>
-    <cite>— Henry, Founder</cite>
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Sizing Guide</span>
+        <h2>Don't know your exact coat size?</h2>
+      </div>
+      <p>If you only know your waist size, use this chart to find your matching coat size. We will tailor it to fit perfectly.</p>
+    </div>
+    <table class="size-table">
+      <thead>
+        <tr>
+          <th>Your Waist Size</th>
+          <th>Recommended Coat Size</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>32</td><td>42</td></tr>
+        <tr><td>34</td><td>46</td></tr>
+        <tr><td>36</td><td>50</td></tr>
+        <tr><td>38</td><td>54</td></tr>
+        <tr><td>40</td><td>58</td></tr>
+        <tr><td>42</td><td>62</td></tr>
+      </tbody>
+    </table>
   </div>
 </section>
 
-<!-- CONTACT SECTION -->
-<section id="contact">
+<section id="order">
   <div class="wrap">
     <div class="contact-grid">
       <div>
-        <span class="eyebrow">Visit Us</span>
-        <h2>Book a measurement</h2>
-        <p>Come in to view the Turkish fabric swatches and get measured. Or send us a message to get started.</p>
+        <span class="eyebrow">Order Now</span>
+        <h2>Place your order</h2>
+        <p>Fill out the form below. When you click submit, it will automatically open WhatsApp so we can finalize your order and delivery details.</p>
         <form id="bookingForm" novalidate style="margin-top:2rem;">
           <div class="form-row">
             <div class="field">
-              <label for="name">Name</label>
+              <label for="name">Full Name</label>
               <input id="name" name="name" type="text" required placeholder="Your name" />
             </div>
             <div class="field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" required placeholder="you@example.com" />
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" required placeholder="e.g. 0712345678" />
             </div>
           </div>
           <div class="field">
-            <label for="interest">Interested in</label>
-            <select id="interest" name="interest">
-              <option>Business Suit</option>
-              <option>Wedding Suit</option>
-              <option>Evening Wear</option>
-              <option>Just browsing fabrics</option>
+            <label for="address">Delivery Address (Home or Office)</label>
+            <input id="address" name="address" type="text" required placeholder="Where should we deliver?" />
+          </div>
+          <div class="field">
+            <label for="suit">Which Suit?</label>
+            <select id="suit" name="suit">
+              <option>The Bosphorus (3-Piece · KES 30k)</option>
+              <option>The Anatolian (2-Piece · KES 25k)</option>
+              <option>The Istanbul (3-Piece · KES 30k)</option>
+              <option>The Cappadocia (2-Piece · KES 25k)</option>
+              <option>Other / Custom</option>
             </select>
           </div>
           <div class="field">
-            <label for="message">Anything we should know</label>
-            <textarea id="message" name="message" placeholder="Occasion, timeline, questions…"></textarea>
-          </div>
-          <button type="submit" class="btn">Request an Appointment</button>
-          <p class="form-note" id="formNote" role="status"></p>
-        </form>
+            <label for="measurements">Sizes (Exact measurements OR just your waist size)</label>
+            <textarea id="measurements" name="measurements" required placeholder="e.g. I am a waist 36, height 5'10. OR: Waist 36, Coat 50, Height 5'<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Henry Bespoke — Premium Turkish MTM Suits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0c0b0a;
+    --ink-soft:#171512;
+    --paper:#f5f2ec;
+    --paper-dim:#d9d3c8;
+    --brass:#b08d57;
+    --muted:#8a8178;
+    --line:rgba(245,242,236,.14);
+    --serif:'Cormorant Garamond',Georgia,serif;
+    --sans:'Inter',-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:var(--sans);
+    font-weight:300;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img,svg{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--brass);color:var(--ink)}
+  .wrap{width:min(1180px,90vw);margin-inline:auto}
+  
+  .eyebrow{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);font-weight:500;display:block;margin-bottom:1.4rem}
+  h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.1;letter-spacing:-.01em}
+  h1{font-size:clamp(2.8rem,7vw,5.5rem)}
+  h2{font-size:clamp(2rem,4vw,3.2rem);margin-bottom:1.2rem}
+  h3{font-size:1.45rem;font-weight:400;margin-bottom:.5rem}
+  p{color:var(--paper-dim);max-width:56ch}
+
+  .btn{display:inline-block;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;padding:1.05rem 2.4rem;border:1px solid var(--brass);color:var(--paper);transition:background .35s,color .35s;cursor:pointer;text-align:center}
+  .btn:hover{background:var(--brass);color:var(--ink)}
+  .btn--ghost{border-color:var(--line)}
+  .btn--ghost:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+
+  .nav{position:fixed;inset:0 0 auto 0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.6rem 5vw;transition:background .4s,padding .4s,border-color .4s;border-bottom:1px solid transparent}
+  .nav.is-stuck{background:rgba(12,11,10,.92);backdrop-filter:blur(14px);padding:1rem 5vw;border-bottom-color:var(--line)}
+  .brand{font-family:var(--serif);font-size:1.35rem;letter-spacing:.16em;text-transform:uppercase}
+  .brand span{color:var(--brass)}
+  .nav-links{display:flex;gap:2.6rem;align-items:center}
+  .nav-links a{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--paper-dim);transition:color .3s}
+  .nav-links a:hover{color:var(--brass)}
+  .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:.4rem}
+  .nav-toggle span{display:block;width:24px;height:1px;background:var(--paper);margin:5px 0;transition:.3s}
+
+  .hero{min-height:90svh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:3rem;padding:8rem 5vw 5rem;position:relative}
+  .hero::after{content:"";position:absolute;inset:2rem;border:1px solid var(--line);pointer-events:none}
+  .hero-copy{position:relative;z-index:2}
+  .hero h1 em{font-style:italic;color:var(--brass)}
+  .hero p{margin:1.8rem 0 2.8rem;font-size:1.02rem}
+  .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+  .hero-figure{display:flex;justify-content:center;align-items:center;position:relative}
+  .hero-figure svg{width:min(100%,380px);color:#22201c;filter:drop-shadow(0 30px 60px rgba(0,0,0,.6));animation:rise 1.6s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+  .hero-figure::before{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(176,141,87,.16),transparent 68%);filter:blur(10px)}
+
+  section{padding:7rem 0}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-bottom:4rem;flex-wrap:wrap}
+  .section-head p{max-width:38ch;font-size:.95rem}
+
+  .collection{border-top:1px solid var(--line)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem}
+  .card{cursor:pointer;background:var(--ink-soft);border:1px solid var(--line);padding:1.5rem;transition:transform .3s}
+  .card:hover{transform:translateY(-5px);border-color:var(--brass)}
+  .card-visual{position:relative;aspect-ratio:4/5;display:grid;place-items:center;overflow:hidden;margin-bottom:1.5rem;background:#1a1815}
+  .card-visual svg{width:50%;color:rgba(255,255,255,.7);transition:transform .7s}
+  .card:hover .card-visual svg{transform:scale(1.05)}
+  .card-meta{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+  .card-meta h3{margin:0;font-size:1.2rem}
+  .card-price{font-size:.9rem;letter-spacing:.08em;color:var(--brass);font-weight:500}
+  .card-desc{font-size:.85rem;color:var(--muted);margin-top:.35rem}
+  .old-price{text-decoration:line-through;color:var(--muted);font-size:.8rem;margin-right:.5rem}
+
+  .craft{border-top:1px solid var(--line);background:#12110f}
+  .craft-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:3.5rem}
+  .craft-item .num{font-family:var(--serif);font-size:2.4rem;color:var(--brass);opacity:.55;display:block;margin-bottom:.8rem}
+  .craft-item p{font-size:.92rem}
+
+  .sizing-section{border-top:1px solid var(--line)}
+  .size-table{width:100%;border-collapse:collapse;margin-top:2rem;max-width:500px;}
+  .size-table th, .size-table td{border:1px solid var(--line);padding:1rem;text-align:left;font-size:.9rem;}
+  .size-table th{color:var(--brass);font-weight:500;text-transform:uppercase;letter-spacing:.1em;font-size:.7rem;}
+  .size-table tr:nth-child(even){background:rgba(255,255,255,.02);}
+
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+  .field{margin-bottom:1.4rem}
+  label{display:block;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
+  input,textarea,select{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--paper);font-family:var(--sans);font-size:.95rem;font-weight:300;padding:.7rem 0;transition:border-color .3s}
+  input:focus,textarea:focus,select:focus{outline:none;border-bottom-color:var(--brass)}
+  textarea{resize:vertical;min-height:80px}
+  select option{background:var(--ink)}
+  
+  footer{border-top:1px solid var(--line);padding:3rem 0;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;font-size:.75rem;color:var(--muted);letter-spacing:.06em}
+  footer a:hover{color:var(--brass)}
+
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr;text-align:left;padding-top:7rem}
+    .hero::after{inset:1rem}
+    .hero-figure{order:-1;margin-bottom:1rem}
+    .hero-figure svg{width:min(62%,220px)}
+    .contact-grid{grid-template-columns:1fr;gap:3.5rem}
+  }
+  @media (max-width:680px){
+    .nav-toggle{display:block}
+    .nav-links{position:fixed;inset:0;flex-direction:column;justify-content:center;background:rgba(12,11,10,.98);gap:2rem;transform:translateY(-100%);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+    .nav-links.open{transform:none}
+    .nav-links a{font-size:.9rem}
+    .form-row{grid-template-columns:1fr}
+    section{padding:4.5rem 0}
+    .hero{padding-bottom:3rem}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#" class="brand">Henry <span>Bespoke</span></a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#collection">Collection</a>
+    <a href="#process">How It Works</a>
+    <a href="#sizing">Sizing</a>
+    <a href="#order" class="btn btn--ghost" style="padding:.7rem 1.6rem;font-size:.66rem">Order Now</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">Premium Turkish Wool · Delivered to You</span>
+    <h1>Made to Measure.<br><em>Perfectly Fitted.</em></h1>
+    <p>Experience the finest 100% Turkish wool. We take your measurements, adjust the suit to your exact body shape, and deliver it directly to your home or office.</p>
+    <div class="hero-actions">
+      <a href="#collection" class="btn">View Collection</a>
+      <a href="#process" class="btn btn--ghost">How It Works</a>
+    </div>
+  </div>
+  <div class="hero-figure" aria-hidden="true">
+    <svg viewBox="0 0 200 300" fill="none">
+      <path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/>
+      <path d="M100 44 L66 56 L86 152 L100 112 L114 152 L134 56Z" fill="#0c0b0a" opacity=".55"/>
+      <path d="M100 44 L88 152 L100 206 L112 152Z" fill="#f5f2ec" opacity=".13"/>
+      <circle cx="100" cy="150" r="3" fill="#b08d57" opacity=".8"/>
+      <circle cx="100" cy="178" r="3" fill="#b08d57" opacity=".8"/>
+    </svg>
+  </div>
+</section>
+
+<section class="collection" id="collection">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">The Collection</span>
+        <h2>100% Turkish Wool</h2>
       </div>
-      <div class="contact-info">
-        <span class="eyebrow">Details</span>
-        <h2>Find us</h2>
-        <dl>
-          <dt>Showroom</dt>
-          <dd>42 Kenyatta Avenue<br>Nairobi, Kenya</dd>
-          <dt>Hours</dt>
-          <dd>Mon – Sat, 9:00 – 18:00<br>Walk-ins welcome</dd>
-          <dt>Telephone</dt>
-          <dd><a href="tel:+2540703670456">+254 0703 670 456</a></dd>
-          <dt>Email</dt>
-          <dd><a href="mailto:sihenry11462@gmail.com">sihenry11462@gmail.com</a></dd>
-        </dl>
+      <p>Select from our premium imported fabrics. Available in 2-piece and 3-piece sets.</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Bosphorus</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Charcoal Wool</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Anatolian</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Midnight Navy</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Istanbul</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Black Wool</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Cappadocia</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Olive Herringbone</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Ankara</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Grey Wool</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Izmir</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Light Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Antalya</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Deep Blue</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Troy</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Brown Tweed</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Bodrum</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Summer Beige</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Ephesus</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Navy Pinstripe</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Konya</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Charcoal Pinstripe</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Mardin</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Classic Black</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Trabzon</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Slate Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Gaziantep</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Textured Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Van</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Midnight Blue</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="craft" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">The Process</span>
+        <h2>How Made-to-Measure Works</h2>
+      </div>
+      <p>No shop visits required. We bring the perfect fit to your doorstep.</p>
+    </div>
+    <div class="craft-grid">
+      <div class="craft-item">
+        <span class="num">01</span>
+        <h3>Choose & Measure</h3>
+        <p>Select your suit. If you know your exact sizes (Height, Waist, Coat), you provide them. If you only know your waist size, we will recommend the best fit for you using our chart below.</p>
+      </div>
+      <div class="craft-item">
+        <span class="num">02</span>
+        <h3>The Tailoring</h3>
+        <p>We take your measurements (or your recommended size) and ensure the suit is perfectly adjusted to your body shape before it is finalized.</p>
+      </div>
+      <div class="craft-item">
+        <span class="num">03</span>
+        <h3>Home or Office Delivery</h3>
+        <p>Once perfectly tailored, your 100% Turkish wool suit is delivered directly to your home or workplace.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<div class="wrap">
-  <footer>
-    <span>© <span id="year"></span> Henry MTM. Imported Turkish Fabrics.</span>
-    <span style="display:flex;gap:1.6rem">
-      <a href="#">Instagram</a>
-      <a href="#">Fabric Care</a>
-    </span>
-  </footer>
-</div>
+<section class="sizing-section" id="sizing">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Sizing Guide</span>
+        <h2>Don't know your exact coat size?</h2>
+      </div>
+      <p>If you only know your waist size, use this chart to find your matching coat size. We will tailor it to fit perfectly.</p>
+    </div>
+    <table class="size-table">
+      <thead>
+        <tr>
+          <th>Your Waist Size</th>
+          <th>Recommended Coat Size</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>32</td><td>42</td></tr>
+        <tr><td>34</td><td>46</td></tr>
+        <tr><td>36</td><td>50</td></tr>
+        <tr><td>38</td><td>54</td></tr>
+        <tr><td>40</td><td>58</td></tr>
+        <tr><td>42</td><td>62</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-<script>
-  const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => nav.classList.toggle('is-stuck', window.scrollY > 40));
+<section id="order">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <span class="eyebrow">Order Now</span>
+        <h2>Place your order</h2>
+        <p>Fill out the form below. When you click submit, it will automatically open WhatsApp so we can finalize your order and delivery details.</p>
+        <form id="bookingForm" novalidate style="margin-top:2rem;">
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Full Name</label>
+              <input id="name" name="name" type="text" required placeholder="Your name" />
+            </div>
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" required placeholder="e.g. 0712345678" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="address">Delivery Address (Home or Office)</label>
+            <input id="address" name="address" type="text" required placeholder="Where should we deliver?" />
+          </div>
+          <div class="field">
+            <label for="suit">Which Suit?</label>
+            <select id="suit" name="suit">
+              <option>The Bosphorus (3-Piece · KES 30k)</option>
+              <option>The Anatolian (2-Piece · KES 25k)</option>
+              <option>The Istanbul (3-Piece · KES 30k)</option>
+              <option>The Cappadocia (2-Piece · KES 25k)</option>
+              <option>Other / Custom</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="measurements">Sizes (Exact measurements OR just your waist size)</label>
+            <textarea id="measurements" name="measurements" required placeholder="e.g. I am a waist 36, height 5'10. OR: Waist 36, Coat 50, Height 5'<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Henry Bespoke — Premium Turkish MTM Suits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0c0b0a;
+    --ink-soft:#171512;
+    --paper:#f5f2ec;
+    --paper-dim:#d9d3c8;
+    --brass:#b08d57;
+    --muted:#8a8178;
+    --line:rgba(245,242,236,.14);
+    --serif:'Cormorant Garamond',Georgia,serif;
+    --sans:'Inter',-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:var(--sans);
+    font-weight:300;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img,svg{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--brass);color:var(--ink)}
+  .wrap{width:min(1180px,90vw);margin-inline:auto}
+  
+  .eyebrow{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);font-weight:500;display:block;margin-bottom:1.4rem}
+  h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.1;letter-spacing:-.01em}
+  h1{font-size:clamp(2.8rem,7vw,5.5rem)}
+  h2{font-size:clamp(2rem,4vw,3.2rem);margin-bottom:1.2rem}
+  h3{font-size:1.45rem;font-weight:400;margin-bottom:.5rem}
+  p{color:var(--paper-dim);max-width:56ch}
 
-  const toggle = document.getElementById('navToggle');
-  const links  = document.getElementById('navLinks');
-  toggle.addEventListener('click', () => {
-    const open = links.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', open);
-  });
-  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+  .btn{display:inline-block;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;padding:1.05rem 2.4rem;border:1px solid var(--brass);color:var(--paper);transition:background .35s,color .35s;cursor:pointer;text-align:center}
+  .btn:hover{background:var(--brass);color:var(--ink)}
+  .btn--ghost{border-color:var(--line)}
+  .btn--ghost:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}
 
-  const form = document.getElementById('bookingForm');
-  const note = document.getElementById('formNote');
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name  = form.name.value.trim();
-    const email = form.email.value.trim();
-    if (!name || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-      note.textContent = 'Please add your name and a valid email.';
-      note.style.color = '#c98a6b';
-      return;
-    }
-    note.textContent = `Thank you, ${name.split(' ')[0]}. We'll be in touch shortly to schedule your measurement.`;
-    note.style.color = '#b08d57';
-    form.reset();
-  });
+  .nav{position:fixed;inset:0 0 auto 0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.6rem 5vw;transition:background .4s,padding .4s,border-color .4s;border-bottom:1px solid transparent}
+  .nav.is-stuck{background:rgba(12,11,10,.92);backdrop-filter:blur(14px);padding:1rem 5vw;border-bottom-color:var(--line)}
+  .brand{font-family:var(--serif);font-size:1.35rem;letter-spacing:.16em;text-transform:uppercase}
+  .brand span{color:var(--brass)}
+  .nav-links{display:flex;gap:2.6rem;align-items:center}
+  .nav-links a{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--paper-dim);transition:color .3s}
+  .nav-links a:hover{color:var(--brass)}
+  .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:.4rem}
+  .nav-toggle span{display:block;width:24px;height:1px;background:var(--paper);margin:5px 0;transition:.3s}
 
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-</body>
-</html>
+  .hero{min-height:90svh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:3rem;padding:8rem 5vw 5rem;position:relative}
+  .hero::after{content:"";position:absolute;inset:2rem;border:1px solid var(--line);pointer-events:none}
+  .hero-copy{position:relative;z-index:2}
+  .hero h1 em{font-style:italic;color:var(--brass)}
+  .hero p{margin:1.8rem 0 2.8rem;font-size:1.02rem}
+  .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+  .hero-figure{display:flex;justify-content:center;align-items:center;position:relative}
+  .hero-figure svg{width:min(100%,380px);color:#22201c;filter:drop-shadow(0 30px 60px rgba(0,0,0,.6));animation:rise 1.6s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+  .hero-figure::before{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(176,141,87,.16),transparent 68%);filter:blur(10px)}
+
+  section{padding:7rem 0}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-bottom:4rem;flex-wrap:wrap}
+  .section-head p{max-width:38ch;font-size:.95rem}
+
+  .collection{border-top:1px solid var(--line)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem}
+  .card{cursor:pointer;background:var(--ink-soft);border:1px solid var(--line);padding:1.5rem;transition:transform .3s}
+  .card:hover{transform:translateY(-5px);border-color:var(--brass)}
+  .card-visual{position:relative;aspect-ratio:4/5;display:grid;place-items:center;overflow:hidden;margin-bottom:1.5rem;background:#1a1815}
+  .card-visual svg{width:50%;color:rgba(255,255,255,.7);transition:transform .7s}
+  .card:hover .card-visual svg{transform:scale(1.05)}
+  .card-meta{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+  .card-meta h3{margin:0;font-size:1.2rem}
+  .card-price{font-size:.9rem;letter-spacing:.08em;color:var(--brass);font-weight:500}
+  .card-desc{font-size:.85rem;color:var(--muted);margin-top:.35rem}
+  .old-price{text-decoration:line-through;color:var(--muted);font-size:.8rem;margin-right:.5rem}
+
+  .craft{border-top:1px solid var(--line);background:#12110f}
+  .craft-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:3.5rem}
+  .craft-item .num{font-family:var(--serif);font-size:2.4rem;color:var(--brass);opacity:.55;display:block;margin-bottom:.8rem}
+  .craft-item p{font-size:.92rem}
+
+  .sizing-section{border-top:1px solid var(--line)}
+  .size-table{width:100%;border-collapse:collapse;margin-top:2rem;max-width:500px;}
+  .size-table th, .size-table td{border:1px solid var(--line);padding:1rem;text-align:left;font-size:.9rem;}
+  .size-table th{color:var(--brass);font-weight:500;text-transform:uppercase;letter-spacing:.1em;font-size:.7rem;}
+  .size-table tr:nth-child(even){background:rgba(255,255,255,.02);}
+
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+  .field{margin-bottom:1.4rem}
+  label{display:block;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
+  input,textarea,select{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--paper);font-family:var(--sans);font-size:.95rem;font-weight:300;padding:.7rem 0;transition:border-color .3s}
+  input:focus,textarea:focus,select:focus{outline:none;border-bottom-color:var(--brass)}
+  textarea{resize:vertical;min-height:80px}
+  select option{background:var(--ink)}
+  
+  footer{border-top:1px solid var(--line);padding:3rem 0;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;font-size:.75rem;color:var(--muted);letter-spacing:.06em}
+  footer a:hover{color:var(--brass)}
+
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr;text-align:left;padding-top:7rem}
+    .hero::after{inset:1rem}
+    .hero-figure{order:-1;margin-bottom:1rem}
+    .hero-figure svg{width:min(62%,220px)}
+    .contact-grid{grid-template-columns:1fr;gap:3.5rem}
+  }
+  @media (max-width:680px){
+    .nav-toggle{display:block}
+    .nav-links{position:fixed;inset:0;flex-direction:column;justify-content:center;background:rgba(12,11,10,.98);gap:2rem;transform:translateY(-100%);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+    .nav-links.open{transform:none}
+    .nav-links a{font-size:.9rem}
+    .form-row{grid-template-columns:1fr}
+    section{padding:4.5rem 0}
+    .hero{padding-bottom:3rem}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#" class="brand">Henry <span>Bespoke</span></a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#collection">Collection</a>
+    <a href="#process">How It Works</a>
+    <a href="#sizing">Sizing</a>
+    <a href="#order" class="btn btn--ghost" style="padding:.7rem 1.6rem;font-size:.66rem">Order Now</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">Premium Turkish Wool · Delivered to You</span>
+    <h1>Made to Measure.<br><em>Perfectly Fitted.</em></h1>
+    <p>Experience the finest 100% Turkish wool. We take your measurements, adjust the suit to your exact body shape, and deliver it directly to your home or office.</p>
+    <div class="hero-actions">
+      <a href="#collection" class="btn">View Collection</a>
+      <a href="#process" class="btn btn--ghost">How It Works</a>
+    </div>
+  </div>
+  <div class="hero-figure" aria-hidden="true">
+    <svg viewBox="0 0 200 300" fill="none">
+      <path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/>
+      <path d="M100 44 L66 56 L86 152 L100 112 L114 152 L134 56Z" fill="#0c0b0a" opacity=".55"/>
+      <path d="M100 44 L88 152 L100 206 L112 152Z" fill="#f5f2ec" opacity=".13"/>
+      <circle cx="100" cy="150" r="3" fill="#b08d57" opacity=".8"/>
+      <circle cx="100" cy="178" r="3" fill="#b08d57" opacity=".8"/>
+    </svg>
+  </div>
+</section>
+
+<section class="collection" id="collection">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">The Collection</span>
+        <h2>100% Turkish Wool</h2>
+      </div>
+      <p>Select from our premium imported fabrics. Available in 2-piece and 3-piece sets.</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Bosphorus</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Charcoal Wool</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Anatolian</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Midnight Navy</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Istanbul</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Black Wool</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Cappadocia</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Olive Herringbone</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Ankara</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Grey Wool</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Izmir</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Light Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Antalya</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Deep Blue</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Troy</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Brown Tweed</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Bodrum</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Summer Beige</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Ephesus</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Navy Pinstripe</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Konya</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Charcoal Pinstripe</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Mardin</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Classic Black</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Trabzon</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Slate Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Gaziantep</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Textured Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Van</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Midnight Blue</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="craft" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">The Process</span>
+        <h2>How Made-to-Measure Works</h2>
+      </div>
+      <p>No shop visits required. We bring the perfect fit to your doorstep.</p>
+    </div>
+    <div class="craft-grid">
+      <div class="craft-item">
+        <span class="num">01</span>
+        <h3>Choose & Measure</h3>
+        <p>Select your suit. If you know your exact sizes (Height, Waist, Coat), you provide them. If you only know your waist size, we will recommend the best fit for you using our chart below.</p>
+      </div>
+      <div class="craft-item">
+        <span class="num">02</span>
+        <h3>The Tailoring</h3>
+        <p>We take your measurements (or your recommended size) and ensure the suit is perfectly adjusted to your body shape before it is finalized.</p>
+      </div>
+      <div class="craft-item">
+        <span class="num">03</span>
+        <h3>Home or Office Delivery</h3>
+        <p>Once perfectly tailored, your 100% Turkish wool suit is delivered directly to your home or workplace.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sizing-section" id="sizing">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Sizing Guide</span>
+        <h2>Don't know your exact coat size?</h2>
+      </div>
+      <p>If you only know your waist size, use this chart to find your matching coat size. We will tailor it to fit perfectly.</p>
+    </div>
+    <table class="size-table">
+      <thead>
+        <tr>
+          <th>Your Waist Size</th>
+          <th>Recommended Coat Size</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>32</td><td>42</td></tr>
+        <tr><td>34</td><td>46</td></tr>
+        <tr><td>36</td><td>50</td></tr>
+        <tr><td>38</td><td>54</td></tr>
+        <tr><td>40</td><td>58</td></tr>
+        <tr><td>42</td><td>62</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="order">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <span class="eyebrow">Order Now</span>
+        <h2>Place your order</h2>
+        <p>Fill out the form below. When you click submit, it will automatically open WhatsApp so we can finalize your order and delivery details.</p>
+        <form id="bookingForm" novalidate style="margin-top:2rem;">
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Full Name</label>
+              <input id="name" name="name" type="text" required placeholder="Your name" />
+            </div>
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" required placeholder="e.g. 0712345678" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="address">Delivery Address (Home or Office)</label>
+            <input id="address" name="address" type="text" required placeholder="Where should we deliver?" />
+          </div>
+          <div class="field">
+            <label for="suit">Which Suit?</label>
+            <select id="suit" name="suit">
+              <option>The Bosphorus (3-Piece · KES 30k)</option>
+              <option>The Anatolian (2-Piece · KES 25k)</option>
+              <option>The Istanbul (3-Piece · KES 30k)</option>
+              <option>The Cappadocia (2-Piece · KES 25k)</option>
+              <option>Other / Custom</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="measurements">Sizes (Exact measurements OR just your waist size)</label>
+            <textarea id="measurements" name="measurements" required placeholder="e.g. I am a waist 36, height 5'10. OR: Waist 36, Coat 50, Height 5'<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Henry Bespoke — Premium Turkish MTM Suits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0c0b0a;
+    --ink-soft:#171512;
+    --paper:#f5f2ec;
+    --paper-dim:#d9d3c8;
+    --brass:#b08d57;
+    --muted:#8a8178;
+    --line:rgba(245,242,236,.14);
+    --serif:'Cormorant Garamond',Georgia,serif;
+    --sans:'Inter',-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:var(--sans);
+    font-weight:300;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img,svg{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--brass);color:var(--ink)}
+  .wrap{width:min(1180px,90vw);margin-inline:auto}
+  
+  .eyebrow{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);font-weight:500;display:block;margin-bottom:1.4rem}
+  h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.1;letter-spacing:-.01em}
+  h1{font-size:clamp(2.8rem,7vw,5.5rem)}
+  h2{font-size:clamp(2rem,4vw,3.2rem);margin-bottom:1.2rem}
+  h3{font-size:1.45rem;font-weight:400;margin-bottom:.5rem}
+  p{color:var(--paper-dim);max-width:56ch}
+
+  .btn{display:inline-block;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;padding:1.05rem 2.4rem;border:1px solid var(--brass);color:var(--paper);transition:background .35s,color .35s;cursor:pointer;text-align:center}
+  .btn:hover{background:var(--brass);color:var(--ink)}
+  .btn--ghost{border-color:var(--line)}
+  .btn--ghost:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+
+  .nav{position:fixed;inset:0 0 auto 0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.6rem 5vw;transition:background .4s,padding .4s,border-color .4s;border-bottom:1px solid transparent}
+  .nav.is-stuck{background:rgba(12,11,10,.92);backdrop-filter:blur(14px);padding:1rem 5vw;border-bottom-color:var(--line)}
+  .brand{font-family:var(--serif);font-size:1.35rem;letter-spacing:.16em;text-transform:uppercase}
+  .brand span{color:var(--brass)}
+  .nav-links{display:flex;gap:2.6rem;align-items:center}
+  .nav-links a{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--paper-dim);transition:color .3s}
+  .nav-links a:hover{color:var(--brass)}
+  .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:.4rem}
+  .nav-toggle span{display:block;width:24px;height:1px;background:var(--paper);margin:5px 0;transition:.3s}
+
+  .hero{min-height:90svh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:3rem;padding:8rem 5vw 5rem;position:relative}
+  .hero::after{content:"";position:absolute;inset:2rem;border:1px solid var(--line);pointer-events:none}
+  .hero-copy{position:relative;z-index:2}
+  .hero h1 em{font-style:italic;color:var(--brass)}
+  .hero p{margin:1.8rem 0 2.8rem;font-size:1.02rem}
+  .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+  .hero-figure{display:flex;justify-content:center;align-items:center;position:relative}
+  .hero-figure svg{width:min(100%,380px);color:#22201c;filter:drop-shadow(0 30px 60px rgba(0,0,0,.6));animation:rise 1.6s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+  .hero-figure::before{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(176,141,87,.16),transparent 68%);filter:blur(10px)}
+
+  section{padding:7rem 0}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-bottom:4rem;flex-wrap:wrap}
+  .section-head p{max-width:38ch;font-size:.95rem}
+
+  .collection{border-top:1px solid var(--line)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem}
+  .card{cursor:pointer;background:var(--ink-soft);border:1px solid var(--line);padding:1.5rem;transition:transform .3s}
+  .card:hover{transform:translateY(-5px);border-color:var(--brass)}
+  .card-visual{position:relative;aspect-ratio:4/5;display:grid;place-items:center;overflow:hidden;margin-bottom:1.5rem;background:#1a1815}
+  .card-visual svg{width:50%;color:rgba(255,255,255,.7);transition:transform .7s}
+  .card:hover .card-visual svg{transform:scale(1.05)}
+  .card-meta{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+  .card-meta h3{margin:0;font-size:1.2rem}
+  .card-price{font-size:.9rem;letter-spacing:.08em;color:var(--brass);font-weight:500}
+  .card-desc{font-size:.85rem;color:var(--muted);margin-top:.35rem}
+  .old-price{text-decoration:line-through;color:var(--muted);font-size:.8rem;margin-right:.5rem}
+
+  .craft{border-top:1px solid var(--line);background:#12110f}
+  .craft-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:3.5rem}
+  .craft-item .num{font-family:var(--serif);font-size:2.4rem;color:var(--brass);opacity:.55;display:block;margin-bottom:.8rem}
+  .craft-item p{font-size:.92rem}
+
+  .sizing-section{border-top:1px solid var(--line)}
+  .size-table{width:100%;border-collapse:collapse;margin-top:2rem;max-width:500px;}
+  .size-table th, .size-table td{border:1px solid var(--line);padding:1rem;text-align:left;font-size:.9rem;}
+  .size-table th{color:var(--brass);font-weight:500;text-transform:uppercase;letter-spacing:.1em;font-size:.7rem;}
+  .size-table tr:nth-child(even){background:rgba(255,255,255,.02);}
+
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+  .field{margin-bottom:1.4rem}
+  label{display:block;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
+  input,textarea,select{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--paper);font-family:var(--sans);font-size:.95rem;font-weight:300;padding:.7rem 0;transition:border-color .3s}
+  input:focus,textarea:focus,select:focus{outline:none;border-bottom-color:var(--brass)}
+  textarea{resize:vertical;min-height:80px}
+  select option{background:var(--ink)}
+  
+  footer{border-top:1px solid var(--line);padding:3rem 0;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;font-size:.75rem;color:var(--muted);letter-spacing:.06em}
+  footer a:hover{color:var(--brass)}
+
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr;text-align:left;padding-top:7rem}
+    .hero::after{inset:1rem}
+    .hero-figure{order:-1;margin-bottom:1rem}
+    .hero-figure svg{width:min(62%,220px)}
+    .contact-grid{grid-template-columns:1fr;gap:3.5rem}
+  }
+  @media (max-width:680px){
+    .nav-toggle{display:block}
+    .nav-links{position:fixed;inset:0;flex-direction:column;justify-content:center;background:rgba(12,11,10,.98);gap:2rem;transform:translateY(-100%);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+    .nav-links.open{transform:none}
+    .nav-links a{font-size:.9rem}
+    .form-row{grid-template-columns:1fr}
+    section{padding:4.5rem 0}
+    .hero{padding-bottom:3rem}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#" class="brand">Henry <span>Bespoke</span></a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#collection">Collection</a>
+    <a href="#process">How It Works</a>
+    <a href="#sizing">Sizing</a>
+    <a href="#order" class="btn btn--ghost" style="padding:.7rem 1.6rem;font-size:.66rem">Order Now</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">Premium Turkish Wool · Delivered to You</span>
+    <h1>Made to Measure.<br><em>Perfectly Fitted.</em></h1>
+    <p>Experience the finest 100% Turkish wool. We take your measurements, adjust the suit to your exact body shape, and deliver it directly to your home or office.</p>
+    <div class="hero-actions">
+      <a href="#collection" class="btn">View Collection</a>
+      <a href="#process" class="btn btn--ghost">How It Works</a>
+    </div>
+  </div>
+  <div class="hero-figure" aria-hidden="true">
+    <svg viewBox="0 0 200 300" fill="none">
+      <path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/>
+      <path d="M100 44 L66 56 L86 152 L100 112 L114 152 L134 56Z" fill="#0c0b0a" opacity=".55"/>
+      <path d="M100 44 L88 152 L100 206 L112 152Z" fill="#f5f2ec" opacity=".13"/>
+      <circle cx="100" cy="150" r="3" fill="#b08d57" opacity=".8"/>
+      <circle cx="100" cy="178" r="3" fill="#b08d57" opacity=".8"/>
+    </svg>
+  </div>
+</section>
+
+<section class="collection" id="collection">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">The Collection</span>
+        <h2>100% Turkish Wool</h2>
+      </div>
+      <p>Select from our premium imported fabrics. Available in 2-piece and 3-piece sets.</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Bosphorus</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Charcoal Wool</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Anatolian</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Midnight Navy</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Istanbul</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Black Wool</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Cappadocia</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Olive Herringbone</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Ankara</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Grey Wool</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Izmir</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Light Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Antalya</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Deep Blue</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Troy</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Brown Tweed</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Bodrum</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Summer Beige</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Ephesus</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Navy Pinstripe</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Konya</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Charcoal Pinstripe</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Mardin</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Classic Black</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Trabzon</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Slate Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Gaziantep</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Textured Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Van</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Midnight Blue</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="craft" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">The Process</span>
+        <h2>How Made-to-Measure Works</h2>
+      </div>
+      <p>No shop visits required. We bring the perfect fit to your doorstep.</p>
+    </div>
+    <div class="craft-grid">
+      <div class="craft-item">
+        <span class="num">01</span>
+        <h3>Choose & Measure</h3>
+        <p>Select your suit. If you know your exact sizes (Height, Waist, Coat), you provide them. If you only know your waist size, we will recommend the best fit for you using our chart below.</p>
+      </div>
+      <div class="craft-item">
+        <span class="num">02</span>
+        <h3>The Tailoring</h3>
+        <p>We take your measurements (or your recommended size) and ensure the suit is perfectly adjusted to your body shape before it is finalized.</p>
+      </div>
+      <div class="craft-item">
+        <span class="num">03</span>
+        <h3>Home or Office Delivery</h3>
+        <p>Once perfectly tailored, your 100% Turkish wool suit is delivered directly to your home or workplace.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sizing-section" id="sizing">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Sizing Guide</span>
+        <h2>Don't know your exact coat size?</h2>
+      </div>
+      <p>If you only know your waist size, use this chart to find your matching coat size. We will tailor it to fit perfectly.</p>
+    </div>
+    <table class="size-table">
+      <thead>
+        <tr>
+          <th>Your Waist Size</th>
+          <th>Recommended Coat Size</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>32</td><td>42</td></tr>
+        <tr><td>34</td><td>46</td></tr>
+        <tr><td>36</td><td>50</td></tr>
+        <tr><td>38</td><td>54</td></tr>
+        <tr><td>40</td><td>58</td></tr>
+        <tr><td>42</td><td>62</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="order">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <span class="eyebrow">Order Now</span>
+        <h2>Place your order</h2>
+        <p>Fill out the form below. When you click submit, it will automatically open WhatsApp so we can finalize your order and delivery details.</p>
+        <form id="bookingForm" novalidate style="margin-top:2rem;">
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Full Name</label>
+              <input id="name" name="name" type="text" required placeholder="Your name" />
+            </div>
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" required placeholder="e.g. 0712345678" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="address">Delivery Address (Home or Office)</label>
+            <input id="address" name="address" type="text" required placeholder="Where should we deliver?" />
+          </div>
+          <div class="field">
+            <label for="suit">Which Suit?</label>
+            <select id="suit" name="suit">
+              <option>The Bosphorus (3-Piece · KES 30k)</option>
+              <option>The Anatolian (2-Piece · KES 25k)</option>
+              <option>The Istanbul (3-Piece · KES 30k)</option>
+              <option>The Cappadocia (2-Piece · KES 25k)</option>
+              <option>Other / Custom</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="measurements">Sizes (Exact measurements OR just your waist size)</label>
+            <textarea id="measurements" name="measurements" required placeholder="e.g. I am a waist 36, height 5'10. OR: Waist 36, Coat 50, Height 5'<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Henry Bespoke — Premium Turkish MTM Suits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0c0b0a;
+    --ink-soft:#171512;
+    --paper:#f5f2ec;
+    --paper-dim:#d9d3c8;
+    --brass:#b08d57;
+    --muted:#8a8178;
+    --line:rgba(245,242,236,.14);
+    --serif:'Cormorant Garamond',Georgia,serif;
+    --sans:'Inter',-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:var(--sans);
+    font-weight:300;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img,svg{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--brass);color:var(--ink)}
+  .wrap{width:min(1180px,90vw);margin-inline:auto}
+  
+  .eyebrow{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);font-weight:500;display:block;margin-bottom:1.4rem}
+  h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.1;letter-spacing:-.01em}
+  h1{font-size:clamp(2.8rem,7vw,5.5rem)}
+  h2{font-size:clamp(2rem,4vw,3.2rem);margin-bottom:1.2rem}
+  h3{font-size:1.45rem;font-weight:400;margin-bottom:.5rem}
+  p{color:var(--paper-dim);max-width:56ch}
+
+  .btn{display:inline-block;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;padding:1.05rem 2.4rem;border:1px solid var(--brass);color:var(--paper);transition:background .35s,color .35s;cursor:pointer;text-align:center}
+  .btn:hover{background:var(--brass);color:var(--ink)}
+  .btn--ghost{border-color:var(--line)}
+  .btn--ghost:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+
+  .nav{position:fixed;inset:0 0 auto 0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.6rem 5vw;transition:background .4s,padding .4s,border-color .4s;border-bottom:1px solid transparent}
+  .nav.is-stuck{background:rgba(12,11,10,.92);backdrop-filter:blur(14px);padding:1rem 5vw;border-bottom-color:var(--line)}
+  .brand{font-family:var(--serif);font-size:1.35rem;letter-spacing:.16em;text-transform:uppercase}
+  .brand span{color:var(--brass)}
+  .nav-links{display:flex;gap:2.6rem;align-items:center}
+  .nav-links a{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--paper-dim);transition:color .3s}
+  .nav-links a:hover{color:var(--brass)}
+  .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:.4rem}
+  .nav-toggle span{display:block;width:24px;height:1px;background:var(--paper);margin:5px 0;transition:.3s}
+
+  .hero{min-height:90svh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:3rem;padding:8rem 5vw 5rem;position:relative}
+  .hero::after{content:"";position:absolute;inset:2rem;border:1px solid var(--line);pointer-events:none}
+  .hero-copy{position:relative;z-index:2}
+  .hero h1 em{font-style:italic;color:var(--brass)}
+  .hero p{margin:1.8rem 0 2.8rem;font-size:1.02rem}
+  .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+  .hero-figure{display:flex;justify-content:center;align-items:center;position:relative}
+  .hero-figure svg{width:min(100%,380px);color:#22201c;filter:drop-shadow(0 30px 60px rgba(0,0,0,.6));animation:rise 1.6s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+  .hero-figure::before{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(176,141,87,.16),transparent 68%);filter:blur(10px)}
+
+  section{padding:7rem 0}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-bottom:4rem;flex-wrap:wrap}
+  .section-head p{max-width:38ch;font-size:.95rem}
+
+  .collection{border-top:1px solid var(--line)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem}
+  .card{cursor:pointer;background:var(--ink-soft);border:1px solid var(--line);padding:1.5rem;transition:transform .3s}
+  .card:hover{transform:translateY(-5px);border-color:var(--brass)}
+  .card-visual{position:relative;aspect-ratio:4/5;display:grid;place-items:center;overflow:hidden;margin-bottom:1.5rem;background:#1a1815}
+  .card-visual svg{width:50%;color:rgba(255,255,255,.7);transition:transform .7s}
+  .card:hover .card-visual svg{transform:scale(1.05)}
+  .card-meta{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+  .card-meta h3{margin:0;font-size:1.2rem}
+  .card-price{font-size:.9rem;letter-spacing:.08em;color:var(--brass);font-weight:500}
+  .card-desc{font-size:.85rem;color:var(--muted);margin-top:.35rem}
+  .old-price{text-decoration:line-through;color:var(--muted);font-size:.8rem;margin-right:.5rem}
+
+  .craft{border-top:1px solid var(--line);background:#12110f}
+  .craft-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:3.5rem}
+  .craft-item .num{font-family:var(--serif);font-size:2.4rem;color:var(--brass);opacity:.55;display:block;margin-bottom:.8rem}
+  .craft-item p{font-size:.92rem}
+
+  .sizing-section{border-top:1px solid var(--line)}
+  .size-table{width:100%;border-collapse:collapse;margin-top:2rem;max-width:500px;}
+  .size-table th, .size-table td{border:1px solid var(--line);padding:1rem;text-align:left;font-size:.9rem;}
+  .size-table th{color:var(--brass);font-weight:500;text-transform:uppercase;letter-spacing:.1em;font-size:.7rem;}
+  .size-table tr:nth-child(even){background:rgba(255,255,255,.02);}
+
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+  .field{margin-bottom:1.4rem}
+  label{display:block;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
+  input,textarea,select{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--paper);font-family:var(--sans);font-size:.95rem;font-weight:300;padding:.7rem 0;transition:border-color .3s}
+  input:focus,textarea:focus,select:focus{outline:none;border-bottom-color:var(--brass)}
+  textarea{resize:vertical;min-height:80px}
+  select option{background:var(--ink)}
+  
+  footer{border-top:1px solid var(--line);padding:3rem 0;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;font-size:.75rem;color:var(--muted);letter-spacing:.06em}
+  footer a:hover{color:var(--brass)}
+
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr;text-align:left;padding-top:7rem}
+    .hero::after{inset:1rem}
+    .hero-figure{order:-1;margin-bottom:1rem}
+    .hero-figure svg{width:min(62%,220px)}
+    .contact-grid{grid-template-columns:1fr;gap:3.5rem}
+  }
+  @media (max-width:680px){
+    .nav-toggle{display:block}
+    .nav-links{position:fixed;inset:0;flex-direction:column;justify-content:center;background:rgba(12,11,10,.98);gap:2rem;transform:translateY(-100%);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+    .nav-links.open{transform:none}
+    .nav-links a{font-size:.9rem}
+    .form-row{grid-template-columns:1fr}
+    section{padding:4.5rem 0}
+    .hero{padding-bottom:3rem}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#" class="brand">Henry <span>Bespoke</span></a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#collection">Collection</a>
+    <a href="#process">How It Works</a>
+    <a href="#sizing">Sizing</a>
+    <a href="#order" class="btn btn--ghost" style="padding:.7rem 1.6rem;font-size:.66rem">Order Now</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">Premium Turkish Wool · Delivered to You</span>
+    <h1>Made to Measure.<br><em>Perfectly Fitted.</em></h1>
+    <p>Experience the finest 100% Turkish wool. We take your measurements, adjust the suit to your exact body shape, and deliver it directly to your home or office.</p>
+    <div class="hero-actions">
+      <a href="#collection" class="btn">View Collection</a>
+      <a href="#process" class="btn btn--ghost">How It Works</a>
+    </div>
+  </div>
+  <div class="hero-figure" aria-hidden="true">
+    <svg viewBox="0 0 200 300" fill="none">
+      <path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/>
+      <path d="M100 44 L66 56 L86 152 L100 112 L114 152 L134 56Z" fill="#0c0b0a" opacity=".55"/>
+      <path d="M100 44 L88 152 L100 206 L112 152Z" fill="#f5f2ec" opacity=".13"/>
+      <circle cx="100" cy="150" r="3" fill="#b08d57" opacity=".8"/>
+      <circle cx="100" cy="178" r="3" fill="#b08d57" opacity=".8"/>
+    </svg>
+  </div>
+</section>
+
+<section class="collection" id="collection">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">The Collection</span>
+        <h2>100% Turkish Wool</h2>
+      </div>
+      <p>Select from our premium imported fabrics. Available in 2-piece and 3-piece sets.</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Bosphorus</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Charcoal Wool</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Anatolian</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Midnight Navy</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Istanbul</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Black Wool</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Cappadocia</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Olive Herringbone</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Ankara</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Grey Wool</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Izmir</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Light Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Antalya</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Deep Blue</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Troy</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Brown Tweed</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Bodrum</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Summer Beige</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Ephesus</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Navy Pinstripe</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Konya</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Charcoal Pinstripe</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Mardin</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Classic Black</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Trabzon</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Slate Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Gaziantep</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Textured Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Van</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Midnight Blue</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="craft" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">The Process</span>
+        <h2>How Made-to-Measure Works</h2>
+      </div>
+      <p>No shop visits required. We bring the perfect fit to your doorstep.</p>
+    </div>
+    <div class="craft-grid">
+      <div class="craft-item">
+        <span class="num">01</span>
+        <h3>Choose & Measure</h3>
+        <p>Select your suit. If you know your exact sizes (Height, Waist, Coat), you provide them. If you only know your waist size, we will recommend the best fit for you using our chart below.</p>
+      </div>
+      <div class="craft-item">
+        <span class="num">02</span>
+        <h3>The Tailoring</h3>
+        <p>We take your measurements (or your recommended size) and ensure the suit is perfectly adjusted to your body shape before it is finalized.</p>
+      </div>
+      <div class="craft-item">
+        <span class="num">03</span>
+        <h3>Home or Office Delivery</h3>
+        <p>Once perfectly tailored, your 100% Turkish wool suit is delivered directly to your home or workplace.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sizing-section" id="sizing">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Sizing Guide</span>
+        <h2>Don't know your exact coat size?</h2>
+      </div>
+      <p>If you only know your waist size, use this chart to find your matching coat size. We will tailor it to fit perfectly.</p>
+    </div>
+    <table class="size-table">
+      <thead>
+        <tr>
+          <th>Your Waist Size</th>
+          <th>Recommended Coat Size</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>32</td><td>42</td></tr>
+        <tr><td>34</td><td>46</td></tr>
+        <tr><td>36</td><td>50</td></tr>
+        <tr><td>38</td><td>54</td></tr>
+        <tr><td>40</td><td>58</td></tr>
+        <tr><td>42</td><td>62</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="order">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <span class="eyebrow">Order Now</span>
+        <h2>Place your order</h2>
+        <p>Fill out the form below. When you click submit, it will automatically open WhatsApp so we can finalize your order and delivery details.</p>
+        <form id="bookingForm" novalidate style="margin-top:2rem;">
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Full Name</label>
+              <input id="name" name="name" type="text" required placeholder="Your name" />
+            </div>
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" required placeholder="e.g. 0712345678" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="address">Delivery Address (Home or Office)</label>
+            <input id="address" name="address" type="text" required placeholder="Where should we deliver?" />
+          </div>
+          <div class="field">
+            <label for="suit">Which Suit?</label>
+            <select id="suit" name="suit">
+              <option>The Bosphorus (3-Piece · KES 30k)</option>
+              <option>The Anatolian (2-Piece · KES 25k)</option>
+              <option>The Istanbul (3-Piece · KES 30k)</option>
+              <option>The Cappadocia (2-Piece · KES 25k)</option>
+              <option>Other / Custom</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="measurements">Sizes (Exact measurements OR just your waist size)</label>
+            <textarea id="measurements" name="measurements" required placeholder="e.g. I am a waist 36, height 5'10. OR: Waist 36, Coat 50, Height 5'<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Henry Bespoke — Premium Turkish MTM Suits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0c0b0a;
+    --ink-soft:#171512;
+    --paper:#f5f2ec;
+    --paper-dim:#d9d3c8;
+    --brass:#b08d57;
+    --muted:#8a8178;
+    --line:rgba(245,242,236,.14);
+    --serif:'Cormorant Garamond',Georgia,serif;
+    --sans:'Inter',-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:var(--sans);
+    font-weight:300;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img,svg{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--brass);color:var(--ink)}
+  .wrap{width:min(1180px,90vw);margin-inline:auto}
+  
+  .eyebrow{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);font-weight:500;display:block;margin-bottom:1.4rem}
+  h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.1;letter-spacing:-.01em}
+  h1{font-size:clamp(2.8rem,7vw,5.5rem)}
+  h2{font-size:clamp(2rem,4vw,3.2rem);margin-bottom:1.2rem}
+  h3{font-size:1.45rem;font-weight:400;margin-bottom:.5rem}
+  p{color:var(--paper-dim);max-width:56ch}
+
+  .btn{display:inline-block;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;padding:1.05rem 2.4rem;border:1px solid var(--brass);color:var(--paper);transition:background .35s,color .35s;cursor:pointer;text-align:center}
+  .btn:hover{background:var(--brass);color:var(--ink)}
+  .btn--ghost{border-color:var(--line)}
+  .btn--ghost:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+
+  .nav{position:fixed;inset:0 0 auto 0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.6rem 5vw;transition:background .4s,padding .4s,border-color .4s;border-bottom:1px solid transparent}
+  .nav.is-stuck{background:rgba(12,11,10,.92);backdrop-filter:blur(14px);padding:1rem 5vw;border-bottom-color:var(--line)}
+  .brand{font-family:var(--serif);font-size:1.35rem;letter-spacing:.16em;text-transform:uppercase}
+  .brand span{color:var(--brass)}
+  .nav-links{display:flex;gap:2.6rem;align-items:center}
+  .nav-links a{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--paper-dim);transition:color .3s}
+  .nav-links a:hover{color:var(--brass)}
+  .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:.4rem}
+  .nav-toggle span{display:block;width:24px;height:1px;background:var(--paper);margin:5px 0;transition:.3s}
+
+  .hero{min-height:90svh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:3rem;padding:8rem 5vw 5rem;position:relative}
+  .hero::after{content:"";position:absolute;inset:2rem;border:1px solid var(--line);pointer-events:none}
+  .hero-copy{position:relative;z-index:2}
+  .hero h1 em{font-style:italic;color:var(--brass)}
+  .hero p{margin:1.8rem 0 2.8rem;font-size:1.02rem}
+  .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+  .hero-figure{display:flex;justify-content:center;align-items:center;position:relative}
+  .hero-figure svg{width:min(100%,380px);color:#22201c;filter:drop-shadow(0 30px 60px rgba(0,0,0,.6));animation:rise 1.6s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+  .hero-figure::before{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(176,141,87,.16),transparent 68%);filter:blur(10px)}
+
+  section{padding:7rem 0}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-bottom:4rem;flex-wrap:wrap}
+  .section-head p{max-width:38ch;font-size:.95rem}
+
+  .collection{border-top:1px solid var(--line)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem}
+  .card{cursor:pointer;background:var(--ink-soft);border:1px solid var(--line);padding:1.5rem;transition:transform .3s}
+  .card:hover{transform:translateY(-5px);border-color:var(--brass)}
+  .card-visual{position:relative;aspect-ratio:4/5;display:grid;place-items:center;overflow:hidden;margin-bottom:1.5rem;background:#1a1815}
+  .card-visual svg{width:50%;color:rgba(255,255,255,.7);transition:transform .7s}
+  .card:hover .card-visual svg{transform:scale(1.05)}
+  .card-meta{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+  .card-meta h3{margin:0;font-size:1.2rem}
+  .card-price{font-size:.9rem;letter-spacing:.08em;color:var(--brass);font-weight:500}
+  .card-desc{font-size:.85rem;color:var(--muted);margin-top:.35rem}
+  .old-price{text-decoration:line-through;color:var(--muted);font-size:.8rem;margin-right:.5rem}
+
+  .craft{border-top:1px solid var(--line);background:#12110f}
+  .craft-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:3.5rem}
+  .craft-item .num{font-family:var(--serif);font-size:2.4rem;color:var(--brass);opacity:.55;display:block;margin-bottom:.8rem}
+  .craft-item p{font-size:.92rem}
+
+  .sizing-section{border-top:1px solid var(--line)}
+  .size-table{width:100%;border-collapse:collapse;margin-top:2rem;max-width:500px;}
+  .size-table th, .size-table td{border:1px solid var(--line);padding:1rem;text-align:left;font-size:.9rem;}
+  .size-table th{color:var(--brass);font-weight:500;text-transform:uppercase;letter-spacing:.1em;font-size:.7rem;}
+  .size-table tr:nth-child(even){background:rgba(255,255,255,.02);}
+
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+  .field{margin-bottom:1.4rem}
+  label{display:block;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
+  input,textarea,select{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--paper);font-family:var(--sans);font-size:.95rem;font-weight:300;padding:.7rem 0;transition:border-color .3s}
+  input:focus,textarea:focus,select:focus{outline:none;border-bottom-color:var(--brass)}
+  textarea{resize:vertical;min-height:80px}
+  select option{background:var(--ink)}
+  
+  footer{border-top:1px solid var(--line);padding:3rem 0;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;font-size:.75rem;color:var(--muted);letter-spacing:.06em}
+  footer a:hover{color:var(--brass)}
+
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr;text-align:left;padding-top:7rem}
+    .hero::after{inset:1rem}
+    .hero-figure{order:-1;margin-bottom:1rem}
+    .hero-figure svg{width:min(62%,220px)}
+    .contact-grid{grid-template-columns:1fr;gap:3.5rem}
+  }
+  @media (max-width:680px){
+    .nav-toggle{display:block}
+    .nav-links{position:fixed;inset:0;flex-direction:column;justify-content:center;background:rgba(12,11,10,.98);gap:2rem;transform:translateY(-100%);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+    .nav-links.open{transform:none}
+    .nav-links a{font-size:.9rem}
+    .form-row{grid-template-columns:1fr}
+    section{padding:4.5rem 0}
+    .hero{padding-bottom:3rem}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#" class="brand">Henry <span>Bespoke</span></a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#collection">Collection</a>
+    <a href="#process">How It Works</a>
+    <a href="#sizing">Sizing</a>
+    <a href="#order" class="btn btn--ghost" style="padding:.7rem 1.6rem;font-size:.66rem">Order Now</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">Premium Turkish Wool · Delivered to You</span>
+    <h1>Made to Measure.<br><em>Perfectly Fitted.</em></h1>
+    <p>Experience the finest 100% Turkish wool. We take your measurements, adjust the suit to your exact body shape, and deliver it directly to your home or office.</p>
+    <div class="hero-actions">
+      <a href="#collection" class="btn">View Collection</a>
+      <a href="#process" class="btn btn--ghost">How It Works</a>
+    </div>
+  </div>
+  <div class="hero-figure" aria-hidden="true">
+    <svg viewBox="0 0 200 300" fill="none">
+      <path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/>
+      <path d="M100 44 L66 56 L86 152 L100 112 L114 152 L134 56Z" fill="#0c0b0a" opacity=".55"/>
+      <path d="M100 44 L88 152 L100 206 L112 152Z" fill="#f5f2ec" opacity=".13"/>
+      <circle cx="100" cy="150" r="3" fill="#b08d57" opacity=".8"/>
+      <circle cx="100" cy="178" r="3" fill="#b08d57" opacity=".8"/>
+    </svg>
+  </div>
+</section>
+
+<section class="collection" id="collection">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">The Collection</span>
+        <h2>100% Turkish Wool</h2>
+      </div>
+      <p>Select from our premium imported fabrics. Available in 2-piece and 3-piece sets.</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Bosphorus</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Charcoal Wool</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Anatolian</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Midnight Navy</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Istanbul</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Black Wool</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Cappadocia</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Olive Herringbone</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Ankara</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Grey Wool</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Izmir</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Light Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Antalya</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Deep Blue</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Troy</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Brown Tweed</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Bodrum</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Summer Beige</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Ephesus</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Navy Pinstripe</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Konya</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Charcoal Pinstripe</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Mardin</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Classic Black</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Trabzon</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Slate Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Gaziantep</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Textured Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Van</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Midnight Blue</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="craft" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">The Process</span>
+        <h2>How Made-to-Measure Works</h2>
+      </div>
+      <p>No shop visits required. We bring the perfect fit to your doorstep.</p>
+    </div>
+    <div class="craft-grid">
+      <div class="craft-item">
+        <span class="num">01</span>
+        <h3>Choose & Measure</h3>
+        <p>Select your suit. If you know your exact sizes (Height, Waist, Coat), you provide them. If you only know your waist size, we will recommend the best fit for you using our chart below.</p>
+      </div>
+      <div class="craft-item">
+        <span class="num">02</span>
+        <h3>The Tailoring</h3>
+        <p>We take your measurements (or your recommended size) and ensure the suit is perfectly adjusted to your body shape before it is finalized.</p>
+      </div>
+      <div class="craft-item">
+        <span class="num">03</span>
+        <h3>Home or Office Delivery</h3>
+        <p>Once perfectly tailored, your 100% Turkish wool suit is delivered directly to your home or workplace.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sizing-section" id="sizing">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Sizing Guide</span>
+        <h2>Don't know your exact coat size?</h2>
+      </div>
+      <p>If you only know your waist size, use this chart to find your matching coat size. We will tailor it to fit perfectly.</p>
+    </div>
+    <table class="size-table">
+      <thead>
+        <tr>
+          <th>Your Waist Size</th>
+          <th>Recommended Coat Size</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>32</td><td>42</td></tr>
+        <tr><td>34</td><td>46</td></tr>
+        <tr><td>36</td><td>50</td></tr>
+        <tr><td>38</td><td>54</td></tr>
+        <tr><td>40</td><td>58</td></tr>
+        <tr><td>42</td><td>62</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="order">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <span class="eyebrow">Order Now</span>
+        <h2>Place your order</h2>
+        <p>Fill out the form below. When you click submit, it will automatically open WhatsApp so we can finalize your order and delivery details.</p>
+        <form id="bookingForm" novalidate style="margin-top:2rem;">
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Full Name</label>
+              <input id="name" name="name" type="text" required placeholder="Your name" />
+            </div>
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" required placeholder="e.g. 0712345678" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="address">Delivery Address (Home or Office)</label>
+            <input id="address" name="address" type="text" required placeholder="Where should we deliver?" />
+          </div>
+          <div class="field">
+            <label for="suit">Which Suit?</label>
+            <select id="suit" name="suit">
+              <option>The Bosphorus (3-Piece · KES 30k)</option>
+              <option>The Anatolian (2-Piece · KES 25k)</option>
+              <option>The Istanbul (3-Piece · KES 30k)</option>
+              <option>The Cappadocia (2-Piece · KES 25k)</option>
+              <option>Other / Custom</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="measurements">Sizes (Exact measurements OR just your waist size)</label>
+            <textarea id="measurements" name="measurements" required placeholder="e.g. I am a waist 36, height 5'10. OR: Waist 36, Coat 50, Height 5'<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Henry Bespoke — Premium Turkish MTM Suits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0c0b0a;
+    --ink-soft:#171512;
+    --paper:#f5f2ec;
+    --paper-dim:#d9d3c8;
+    --brass:#b08d57;
+    --muted:#8a8178;
+    --line:rgba(245,242,236,.14);
+    --serif:'Cormorant Garamond',Georgia,serif;
+    --sans:'Inter',-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:var(--sans);
+    font-weight:300;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img,svg{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--brass);color:var(--ink)}
+  .wrap{width:min(1180px,90vw);margin-inline:auto}
+  
+  .eyebrow{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);font-weight:500;display:block;margin-bottom:1.4rem}
+  h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.1;letter-spacing:-.01em}
+  h1{font-size:clamp(2.8rem,7vw,5.5rem)}
+  h2{font-size:clamp(2rem,4vw,3.2rem);margin-bottom:1.2rem}
+  h3{font-size:1.45rem;font-weight:400;margin-bottom:.5rem}
+  p{color:var(--paper-dim);max-width:56ch}
+
+  .btn{display:inline-block;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;padding:1.05rem 2.4rem;border:1px solid var(--brass);color:var(--paper);transition:background .35s,color .35s;cursor:pointer;text-align:center}
+  .btn:hover{background:var(--brass);color:var(--ink)}
+  .btn--ghost{border-color:var(--line)}
+  .btn--ghost:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+
+  .nav{position:fixed;inset:0 0 auto 0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.6rem 5vw;transition:background .4s,padding .4s,border-color .4s;border-bottom:1px solid transparent}
+  .nav.is-stuck{background:rgba(12,11,10,.92);backdrop-filter:blur(14px);padding:1rem 5vw;border-bottom-color:var(--line)}
+  .brand{font-family:var(--serif);font-size:1.35rem;letter-spacing:.16em;text-transform:uppercase}
+  .brand span{color:var(--brass)}
+  .nav-links{display:flex;gap:2.6rem;align-items:center}
+  .nav-links a{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--paper-dim);transition:color .3s}
+  .nav-links a:hover{color:var(--brass)}
+  .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:.4rem}
+  .nav-toggle span{display:block;width:24px;height:1px;background:var(--paper);margin:5px 0;transition:.3s}
+
+  .hero{min-height:90svh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:3rem;padding:8rem 5vw 5rem;position:relative}
+  .hero::after{content:"";position:absolute;inset:2rem;border:1px solid var(--line);pointer-events:none}
+  .hero-copy{position:relative;z-index:2}
+  .hero h1 em{font-style:italic;color:var(--brass)}
+  .hero p{margin:1.8rem 0 2.8rem;font-size:1.02rem}
+  .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+  .hero-figure{display:flex;justify-content:center;align-items:center;position:relative}
+  .hero-figure svg{width:min(100%,380px);color:#22201c;filter:drop-shadow(0 30px 60px rgba(0,0,0,.6));animation:rise 1.6s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+  .hero-figure::before{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(176,141,87,.16),transparent 68%);filter:blur(10px)}
+
+  section{padding:7rem 0}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-bottom:4rem;flex-wrap:wrap}
+  .section-head p{max-width:38ch;font-size:.95rem}
+
+  .collection{border-top:1px solid var(--line)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem}
+  .card{cursor:pointer;background:var(--ink-soft);border:1px solid var(--line);padding:1.5rem;transition:transform .3s}
+  .card:hover{transform:translateY(-5px);border-color:var(--brass)}
+  .card-visual{position:relative;aspect-ratio:4/5;display:grid;place-items:center;overflow:hidden;margin-bottom:1.5rem;background:#1a1815}
+  .card-visual svg{width:50%;color:rgba(255,255,255,.7);transition:transform .7s}
+  .card:hover .card-visual svg{transform:scale(1.05)}
+  .card-meta{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+  .card-meta h3{margin:0;font-size:1.2rem}
+  .card-price{font-size:.9rem;letter-spacing:.08em;color:var(--brass);font-weight:500}
+  .card-desc{font-size:.85rem;color:var(--muted);margin-top:.35rem}
+  .old-price{text-decoration:line-through;color:var(--muted);font-size:.8rem;margin-right:.5rem}
+
+  .craft{border-top:1px solid var(--line);background:#12110f}
+  .craft-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:3.5rem}
+  .craft-item .num{font-family:var(--serif);font-size:2.4rem;color:var(--brass);opacity:.55;display:block;margin-bottom:.8rem}
+  .craft-item p{font-size:.92rem}
+
+  .sizing-section{border-top:1px solid var(--line)}
+  .size-table{width:100%;border-collapse:collapse;margin-top:2rem;max-width:500px;}
+  .size-table th, .size-table td{border:1px solid var(--line);padding:1rem;text-align:left;font-size:.9rem;}
+  .size-table th{color:var(--brass);font-weight:500;text-transform:uppercase;letter-spacing:.1em;font-size:.7rem;}
+  .size-table tr:nth-child(even){background:rgba(255,255,255,.02);}
+
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+  .field{margin-bottom:1.4rem}
+  label{display:block;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
+  input,textarea,select{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--paper);font-family:var(--sans);font-size:.95rem;font-weight:300;padding:.7rem 0;transition:border-color .3s}
+  input:focus,textarea:focus,select:focus{outline:none;border-bottom-color:var(--brass)}
+  textarea{resize:vertical;min-height:80px}
+  select option{background:var(--ink)}
+  
+  footer{border-top:1px solid var(--line);padding:3rem 0;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;font-size:.75rem;color:var(--muted);letter-spacing:.06em}
+  footer a:hover{color:var(--brass)}
+
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr;text-align:left;padding-top:7rem}
+    .hero::after{inset:1rem}
+    .hero-figure{order:-1;margin-bottom:1rem}
+    .hero-figure svg{width:min(62%,220px)}
+    .contact-grid{grid-template-columns:1fr;gap:3.5rem}
+  }
+  @media (max-width:680px){
+    .nav-toggle{display:block}
+    .nav-links{position:fixed;inset:0;flex-direction:column;justify-content:center;background:rgba(12,11,10,.98);gap:2rem;transform:translateY(-100%);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+    .nav-links.open{transform:none}
+    .nav-links a{font-size:.9rem}
+    .form-row{grid-template-columns:1fr}
+    section{padding:4.5rem 0}
+    .hero{padding-bottom:3rem}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#" class="brand">Henry <span>Bespoke</span></a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#collection">Collection</a>
+    <a href="#process">How It Works</a>
+    <a href="#sizing">Sizing</a>
+    <a href="#order" class="btn btn--ghost" style="padding:.7rem 1.6rem;font-size:.66rem">Order Now</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">Premium Turkish Wool · Delivered to You</span>
+    <h1>Made to Measure.<br><em>Perfectly Fitted.</em></h1>
+    <p>Experience the finest 100% Turkish wool. We take your measurements, adjust the suit to your exact body shape, and deliver it directly to your home or office.</p>
+    <div class="hero-actions">
+      <a href="#collection" class="btn">View Collection</a>
+      <a href="#process" class="btn btn--ghost">How It Works</a>
+    </div>
+  </div>
+  <div class="hero-figure" aria-hidden="true">
+    <svg viewBox="0 0 200 300" fill="none">
+      <path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/>
+      <path d="M100 44 L66 56 L86 152 L100 112 L114 152 L134 56Z" fill="#0c0b0a" opacity=".55"/>
+      <path d="M100 44 L88 152 L100 206 L112 152Z" fill="#f5f2ec" opacity=".13"/>
+      <circle cx="100" cy="150" r="3" fill="#b08d57" opacity=".8"/>
+      <circle cx="100" cy="178" r="3" fill="#b08d57" opacity=".8"/>
+    </svg>
+  </div>
+</section>
+
+<section class="collection" id="collection">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">The Collection</span>
+        <h2>100% Turkish Wool</h2>
+      </div>
+      <p>Select from our premium imported fabrics. Available in 2-piece and 3-piece sets.</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Bosphorus</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Charcoal Wool</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Anatolian</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Midnight Navy</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Istanbul</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Black Wool</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Cappadocia</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Olive Herringbone</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Ankara</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Grey Wool</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Izmir</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Light Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Antalya</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Deep Blue</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Troy</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Brown Tweed</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Bodrum</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Summer Beige</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Ephesus</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Navy Pinstripe</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Konya</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Charcoal Pinstripe</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Mardin</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Classic Black</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Trabzon</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Slate Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Gaziantep</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Textured Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Van</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Midnight Blue</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="craft" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">The Process</span>
+        <h2>How Made-to-Measure Works</h2>
+      </div>
+      <p>No shop visits required. We bring the perfect fit to your doorstep.</p>
+    </div>
+    <div class="craft-grid">
+      <div class="craft-item">
+        <span class="num">01</span>
+        <h3>Choose & Measure</h3>
+        <p>Select your suit. If you know your exact sizes (Height, Waist, Coat), you provide them. If you only know your waist size, we will recommend the best fit for you using our chart below.</p>
+      </div>
+      <div class="craft-item">
+        <span class="num">02</span>
+        <h3>The Tailoring</h3>
+        <p>We take your measurements (or your recommended size) and ensure the suit is perfectly adjusted to your body shape before it is finalized.</p>
+      </div>
+      <div class="craft-item">
+        <span class="num">03</span>
+        <h3>Home or Office Delivery</h3>
+        <p>Once perfectly tailored, your 100% Turkish wool suit is delivered directly to your home or workplace.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sizing-section" id="sizing">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Sizing Guide</span>
+        <h2>Don't know your exact coat size?</h2>
+      </div>
+      <p>If you only know your waist size, use this chart to find your matching coat size. We will tailor it to fit perfectly.</p>
+    </div>
+    <table class="size-table">
+      <thead>
+        <tr>
+          <th>Your Waist Size</th>
+          <th>Recommended Coat Size</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>32</td><td>42</td></tr>
+        <tr><td>34</td><td>46</td></tr>
+        <tr><td>36</td><td>50</td></tr>
+        <tr><td>38</td><td>54</td></tr>
+        <tr><td>40</td><td>58</td></tr>
+        <tr><td>42</td><td>62</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="order">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <span class="eyebrow">Order Now</span>
+        <h2>Place your order</h2>
+        <p>Fill out the form below. When you click submit, it will automatically open WhatsApp so we can finalize your order and delivery details.</p>
+        <form id="bookingForm" novalidate style="margin-top:2rem;">
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Full Name</label>
+              <input id="name" name="name" type="text" required placeholder="Your name" />
+            </div>
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" required placeholder="e.g. 0712345678" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="address">Delivery Address (Home or Office)</label>
+            <input id="address" name="address" type="text" required placeholder="Where should we deliver?" />
+          </div>
+          <div class="field">
+            <label for="suit">Which Suit?</label>
+            <select id="suit" name="suit">
+              <option>The Bosphorus (3-Piece · KES 30k)</option>
+              <option>The Anatolian (2-Piece · KES 25k)</option>
+              <option>The Istanbul (3-Piece · KES 30k)</option>
+              <option>The Cappadocia (2-Piece · KES 25k)</option>
+              <option>Other / Custom</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="measurements">Sizes (Exact measurements OR just your waist size)</label>
+            <textarea id="measurements" name="measurements" required placeholder="e.g. I am a waist 36, height 5'10. OR: Waist 36, Coat 50, Height 5'<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Henry Bespoke — Premium Turkish MTM Suits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0c0b0a;
+    --ink-soft:#171512;
+    --paper:#f5f2ec;
+    --paper-dim:#d9d3c8;
+    --brass:#b08d57;
+    --muted:#8a8178;
+    --line:rgba(245,242,236,.14);
+    --serif:'Cormorant Garamond',Georgia,serif;
+    --sans:'Inter',-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:var(--sans);
+    font-weight:300;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img,svg{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--brass);color:var(--ink)}
+  .wrap{width:min(1180px,90vw);margin-inline:auto}
+  
+  .eyebrow{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);font-weight:500;display:block;margin-bottom:1.4rem}
+  h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.1;letter-spacing:-.01em}
+  h1{font-size:clamp(2.8rem,7vw,5.5rem)}
+  h2{font-size:clamp(2rem,4vw,3.2rem);margin-bottom:1.2rem}
+  h3{font-size:1.45rem;font-weight:400;margin-bottom:.5rem}
+  p{color:var(--paper-dim);max-width:56ch}
+
+  .btn{display:inline-block;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;padding:1.05rem 2.4rem;border:1px solid var(--brass);color:var(--paper);transition:background .35s,color .35s;cursor:pointer;text-align:center}
+  .btn:hover{background:var(--brass);color:var(--ink)}
+  .btn--ghost{border-color:var(--line)}
+  .btn--ghost:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+
+  .nav{position:fixed;inset:0 0 auto 0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.6rem 5vw;transition:background .4s,padding .4s,border-color .4s;border-bottom:1px solid transparent}
+  .nav.is-stuck{background:rgba(12,11,10,.92);backdrop-filter:blur(14px);padding:1rem 5vw;border-bottom-color:var(--line)}
+  .brand{font-family:var(--serif);font-size:1.35rem;letter-spacing:.16em;text-transform:uppercase}
+  .brand span{color:var(--brass)}
+  .nav-links{display:flex;gap:2.6rem;align-items:center}
+  .nav-links a{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--paper-dim);transition:color .3s}
+  .nav-links a:hover{color:var(--brass)}
+  .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:.4rem}
+  .nav-toggle span{display:block;width:24px;height:1px;background:var(--paper);margin:5px 0;transition:.3s}
+
+  .hero{min-height:90svh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:3rem;padding:8rem 5vw 5rem;position:relative}
+  .hero::after{content:"";position:absolute;inset:2rem;border:1px solid var(--line);pointer-events:none}
+  .hero-copy{position:relative;z-index:2}
+  .hero h1 em{font-style:italic;color:var(--brass)}
+  .hero p{margin:1.8rem 0 2.8rem;font-size:1.02rem}
+  .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+  .hero-figure{display:flex;justify-content:center;align-items:center;position:relative}
+  .hero-figure svg{width:min(100%,380px);color:#22201c;filter:drop-shadow(0 30px 60px rgba(0,0,0,.6));animation:rise 1.6s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+  .hero-figure::before{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(176,141,87,.16),transparent 68%);filter:blur(10px)}
+
+  section{padding:7rem 0}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-bottom:4rem;flex-wrap:wrap}
+  .section-head p{max-width:38ch;font-size:.95rem}
+
+  .collection{border-top:1px solid var(--line)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem}
+  .card{cursor:pointer;background:var(--ink-soft);border:1px solid var(--line);padding:1.5rem;transition:transform .3s}
+  .card:hover{transform:translateY(-5px);border-color:var(--brass)}
+  .card-visual{position:relative;aspect-ratio:4/5;display:grid;place-items:center;overflow:hidden;margin-bottom:1.5rem;background:#1a1815}
+  .card-visual svg{width:50%;color:rgba(255,255,255,.7);transition:transform .7s}
+  .card:hover .card-visual svg{transform:scale(1.05)}
+  .card-meta{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+  .card-meta h3{margin:0;font-size:1.2rem}
+  .card-price{font-size:.9rem;letter-spacing:.08em;color:var(--brass);font-weight:500}
+  .card-desc{font-size:.85rem;color:var(--muted);margin-top:.35rem}
+  .old-price{text-decoration:line-through;color:var(--muted);font-size:.8rem;margin-right:.5rem}
+
+  .craft{border-top:1px solid var(--line);background:#12110f}
+  .craft-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:3.5rem}
+  .craft-item .num{font-family:var(--serif);font-size:2.4rem;color:var(--brass);opacity:.55;display:block;margin-bottom:.8rem}
+  .craft-item p{font-size:.92rem}
+
+  .sizing-section{border-top:1px solid var(--line)}
+  .size-table{width:100%;border-collapse:collapse;margin-top:2rem;max-width:500px;}
+  .size-table th, .size-table td{border:1px solid var(--line);padding:1rem;text-align:left;font-size:.9rem;}
+  .size-table th{color:var(--brass);font-weight:500;text-transform:uppercase;letter-spacing:.1em;font-size:.7rem;}
+  .size-table tr:nth-child(even){background:rgba(255,255,255,.02);}
+
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+  .field{margin-bottom:1.4rem}
+  label{display:block;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
+  input,textarea,select{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--paper);font-family:var(--sans);font-size:.95rem;font-weight:300;padding:.7rem 0;transition:border-color .3s}
+  input:focus,textarea:focus,select:focus{outline:none;border-bottom-color:var(--brass)}
+  textarea{resize:vertical;min-height:80px}
+  select option{background:var(--ink)}
+  
+  footer{border-top:1px solid var(--line);padding:3rem 0;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;font-size:.75rem;color:var(--muted);letter-spacing:.06em}
+  footer a:hover{color:var(--brass)}
+
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr;text-align:left;padding-top:7rem}
+    .hero::after{inset:1rem}
+    .hero-figure{order:-1;margin-bottom:1rem}
+    .hero-figure svg{width:min(62%,220px)}
+    .contact-grid{grid-template-columns:1fr;gap:3.5rem}
+  }
+  @media (max-width:680px){
+    .nav-toggle{display:block}
+    .nav-links{position:fixed;inset:0;flex-direction:column;justify-content:center;background:rgba(12,11,10,.98);gap:2rem;transform:translateY(-100%);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+    .nav-links.open{transform:none}
+    .nav-links a{font-size:.9rem}
+    .form-row{grid-template-columns:1fr}
+    section{padding:4.5rem 0}
+    .hero{padding-bottom:3rem}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#" class="brand">Henry <span>Bespoke</span></a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#collection">Collection</a>
+    <a href="#process">How It Works</a>
+    <a href="#sizing">Sizing</a>
+    <a href="#order" class="btn btn--ghost" style="padding:.7rem 1.6rem;font-size:.66rem">Order Now</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">Premium Turkish Wool · Delivered to You</span>
+    <h1>Made to Measure.<br><em>Perfectly Fitted.</em></h1>
+    <p>Experience the finest 100% Turkish wool. We take your measurements, adjust the suit to your exact body shape, and deliver it directly to your home or office.</p>
+    <div class="hero-actions">
+      <a href="#collection" class="btn">View Collection</a>
+      <a href="#process" class="btn btn--ghost">How It Works</a>
+    </div>
+  </div>
+  <div class="hero-figure" aria-hidden="true">
+    <svg viewBox="0 0 200 300" fill="none">
+      <path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/>
+      <path d="M100 44 L66 56 L86 152 L100 112 L114 152 L134 56Z" fill="#0c0b0a" opacity=".55"/>
+      <path d="M100 44 L88 152 L100 206 L112 152Z" fill="#f5f2ec" opacity=".13"/>
+      <circle cx="100" cy="150" r="3" fill="#b08d57" opacity=".8"/>
+      <circle cx="100" cy="178" r="3" fill="#b08d57" opacity=".8"/>
+    </svg>
+  </div>
+</section>
+
+<section class="collection" id="collection">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">The Collection</span>
+        <h2>100% Turkish Wool</h2>
+      </div>
+      <p>Select from our premium imported fabrics. Available in 2-piece and 3-piece sets.</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Bosphorus</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Charcoal Wool</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Anatolian</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Midnight Navy</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Istanbul</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Black Wool</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Cappadocia</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Olive Herringbone</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Ankara</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Grey Wool</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Izmir</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Light Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Antalya</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Deep Blue</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Troy</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Brown Tweed</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Bodrum</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Summer Beige</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Ephesus</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Navy Pinstripe</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Konya</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Charcoal Pinstripe</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Mardin</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Classic Black</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Trabzon</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Slate Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Gaziantep</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Textured Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Van</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Midnight Blue</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="craft" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">The Process</span>
+        <h2>How Made-to-Measure Works</h2>
+      </div>
+      <p>No shop visits required. We bring the perfect fit to your doorstep.</p>
+    </div>
+    <div class="craft-grid">
+      <div class="craft-item">
+        <span class="num">01</span>
+        <h3>Choose & Measure</h3>
+        <p>Select your suit. If you know your exact sizes (Height, Waist, Coat), you provide them. If you only know your waist size, we will recommend the best fit for you using our chart below.</p>
+      </div>
+      <div class="craft-item">
+        <span class="num">02</span>
+        <h3>The Tailoring</h3>
+        <p>We take your measurements (or your recommended size) and ensure the suit is perfectly adjusted to your body shape before it is finalized.</p>
+      </div>
+      <div class="craft-item">
+        <span class="num">03</span>
+        <h3>Home or Office Delivery</h3>
+        <p>Once perfectly tailored, your 100% Turkish wool suit is delivered directly to your home or workplace.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sizing-section" id="sizing">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Sizing Guide</span>
+        <h2>Don't know your exact coat size?</h2>
+      </div>
+      <p>If you only know your waist size, use this chart to find your matching coat size. We will tailor it to fit perfectly.</p>
+    </div>
+    <table class="size-table">
+      <thead>
+        <tr>
+          <th>Your Waist Size</th>
+          <th>Recommended Coat Size</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>32</td><td>42</td></tr>
+        <tr><td>34</td><td>46</td></tr>
+        <tr><td>36</td><td>50</td></tr>
+        <tr><td>38</td><td>54</td></tr>
+        <tr><td>40</td><td>58</td></tr>
+        <tr><td>42</td><td>62</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="order">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <span class="eyebrow">Order Now</span>
+        <h2>Place your order</h2>
+        <p>Fill out the form below. When you click submit, it will automatically open WhatsApp so we can finalize your order and delivery details.</p>
+        <form id="bookingForm" novalidate style="margin-top:2rem;">
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Full Name</label>
+              <input id="name" name="name" type="text" required placeholder="Your name" />
+            </div>
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" required placeholder="e.g. 0712345678" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="address">Delivery Address (Home or Office)</label>
+            <input id="address" name="address" type="text" required placeholder="Where should we deliver?" />
+          </div>
+          <div class="field">
+            <label for="suit">Which Suit?</label>
+            <select id="suit" name="suit">
+              <option>The Bosphorus (3-Piece · KES 30k)</option>
+              <option>The Anatolian (2-Piece · KES 25k)</option>
+              <option>The Istanbul (3-Piece · KES 30k)</option>
+              <option>The Cappadocia (2-Piece · KES 25k)</option>
+              <option>Other / Custom</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="measurements">Sizes (Exact measurements OR just your waist size)</label>
+            <textarea id="measurements" name="measurements" required placeholder="e.g. I am a waist 36, height 5'10. OR: Waist 36, Coat 50, Height 5'<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Henry Bespoke — Premium Turkish MTM Suits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0c0b0a;
+    --ink-soft:#171512;
+    --paper:#f5f2ec;
+    --paper-dim:#d9d3c8;
+    --brass:#b08d57;
+    --muted:#8a8178;
+    --line:rgba(245,242,236,.14);
+    --serif:'Cormorant Garamond',Georgia,serif;
+    --sans:'Inter',-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:var(--sans);
+    font-weight:300;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img,svg{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--brass);color:var(--ink)}
+  .wrap{width:min(1180px,90vw);margin-inline:auto}
+  
+  .eyebrow{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);font-weight:500;display:block;margin-bottom:1.4rem}
+  h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.1;letter-spacing:-.01em}
+  h1{font-size:clamp(2.8rem,7vw,5.5rem)}
+  h2{font-size:clamp(2rem,4vw,3.2rem);margin-bottom:1.2rem}
+  h3{font-size:1.45rem;font-weight:400;margin-bottom:.5rem}
+  p{color:var(--paper-dim);max-width:56ch}
+
+  .btn{display:inline-block;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;padding:1.05rem 2.4rem;border:1px solid var(--brass);color:var(--paper);transition:background .35s,color .35s;cursor:pointer;text-align:center}
+  .btn:hover{background:var(--brass);color:var(--ink)}
+  .btn--ghost{border-color:var(--line)}
+  .btn--ghost:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+
+  .nav{position:fixed;inset:0 0 auto 0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.6rem 5vw;transition:background .4s,padding .4s,border-color .4s;border-bottom:1px solid transparent}
+  .nav.is-stuck{background:rgba(12,11,10,.92);backdrop-filter:blur(14px);padding:1rem 5vw;border-bottom-color:var(--line)}
+  .brand{font-family:var(--serif);font-size:1.35rem;letter-spacing:.16em;text-transform:uppercase}
+  .brand span{color:var(--brass)}
+  .nav-links{display:flex;gap:2.6rem;align-items:center}
+  .nav-links a{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--paper-dim);transition:color .3s}
+  .nav-links a:hover{color:var(--brass)}
+  .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:.4rem}
+  .nav-toggle span{display:block;width:24px;height:1px;background:var(--paper);margin:5px 0;transition:.3s}
+
+  .hero{min-height:90svh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:3rem;padding:8rem 5vw 5rem;position:relative}
+  .hero::after{content:"";position:absolute;inset:2rem;border:1px solid var(--line);pointer-events:none}
+  .hero-copy{position:relative;z-index:2}
+  .hero h1 em{font-style:italic;color:var(--brass)}
+  .hero p{margin:1.8rem 0 2.8rem;font-size:1.02rem}
+  .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+  .hero-figure{display:flex;justify-content:center;align-items:center;position:relative}
+  .hero-figure svg{width:min(100%,380px);color:#22201c;filter:drop-shadow(0 30px 60px rgba(0,0,0,.6));animation:rise 1.6s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+  .hero-figure::before{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(176,141,87,.16),transparent 68%);filter:blur(10px)}
+
+  section{padding:7rem 0}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-bottom:4rem;flex-wrap:wrap}
+  .section-head p{max-width:38ch;font-size:.95rem}
+
+  .collection{border-top:1px solid var(--line)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem}
+  .card{cursor:pointer;background:var(--ink-soft);border:1px solid var(--line);padding:1.5rem;transition:transform .3s}
+  .card:hover{transform:translateY(-5px);border-color:var(--brass)}
+  .card-visual{position:relative;aspect-ratio:4/5;display:grid;place-items:center;overflow:hidden;margin-bottom:1.5rem;background:#1a1815}
+  .card-visual svg{width:50%;color:rgba(255,255,255,.7);transition:transform .7s}
+  .card:hover .card-visual svg{transform:scale(1.05)}
+  .card-meta{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+  .card-meta h3{margin:0;font-size:1.2rem}
+  .card-price{font-size:.9rem;letter-spacing:.08em;color:var(--brass);font-weight:500}
+  .card-desc{font-size:.85rem;color:var(--muted);margin-top:.35rem}
+  .old-price{text-decoration:line-through;color:var(--muted);font-size:.8rem;margin-right:.5rem}
+
+  .craft{border-top:1px solid var(--line);background:#12110f}
+  .craft-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:3.5rem}
+  .craft-item .num{font-family:var(--serif);font-size:2.4rem;color:var(--brass);opacity:.55;display:block;margin-bottom:.8rem}
+  .craft-item p{font-size:.92rem}
+
+  .sizing-section{border-top:1px solid var(--line)}
+  .size-table{width:100%;border-collapse:collapse;margin-top:2rem;max-width:500px;}
+  .size-table th, .size-table td{border:1px solid var(--line);padding:1rem;text-align:left;font-size:.9rem;}
+  .size-table th{color:var(--brass);font-weight:500;text-transform:uppercase;letter-spacing:.1em;font-size:.7rem;}
+  .size-table tr:nth-child(even){background:rgba(255,255,255,.02);}
+
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+  .field{margin-bottom:1.4rem}
+  label{display:block;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
+  input,textarea,select{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--paper);font-family:var(--sans);font-size:.95rem;font-weight:300;padding:.7rem 0;transition:border-color .3s}
+  input:focus,textarea:focus,select:focus{outline:none;border-bottom-color:var(--brass)}
+  textarea{resize:vertical;min-height:80px}
+  select option{background:var(--ink)}
+  
+  footer{border-top:1px solid var(--line);padding:3rem 0;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;font-size:.75rem;color:var(--muted);letter-spacing:.06em}
+  footer a:hover{color:var(--brass)}
+
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr;text-align:left;padding-top:7rem}
+    .hero::after{inset:1rem}
+    .hero-figure{order:-1;margin-bottom:1rem}
+    .hero-figure svg{width:min(62%,220px)}
+    .contact-grid{grid-template-columns:1fr;gap:3.5rem}
+  }
+  @media (max-width:680px){
+    .nav-toggle{display:block}
+    .nav-links{position:fixed;inset:0;flex-direction:column;justify-content:center;background:rgba(12,11,10,.98);gap:2rem;transform:translateY(-100%);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+    .nav-links.open{transform:none}
+    .nav-links a{font-size:.9rem}
+    .form-row{grid-template-columns:1fr}
+    section{padding:4.5rem 0}
+    .hero{padding-bottom:3rem}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#" class="brand">Henry <span>Bespoke</span></a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#collection">Collection</a>
+    <a href="#process">How It Works</a>
+    <a href="#sizing">Sizing</a>
+    <a href="#order" class="btn btn--ghost" style="padding:.7rem 1.6rem;font-size:.66rem">Order Now</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">Premium Turkish Wool · Delivered to You</span>
+    <h1>Made to Measure.<br><em>Perfectly Fitted.</em></h1>
+    <p>Experience the finest 100% Turkish wool. We take your measurements, adjust the suit to your exact body shape, and deliver it directly to your home or office.</p>
+    <div class="hero-actions">
+      <a href="#collection" class="btn">View Collection</a>
+      <a href="#process" class="btn btn--ghost">How It Works</a>
+    </div>
+  </div>
+  <div class="hero-figure" aria-hidden="true">
+    <svg viewBox="0 0 200 300" fill="none">
+      <path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/>
+      <path d="M100 44 L66 56 L86 152 L100 112 L114 152 L134 56Z" fill="#0c0b0a" opacity=".55"/>
+      <path d="M100 44 L88 152 L100 206 L112 152Z" fill="#f5f2ec" opacity=".13"/>
+      <circle cx="100" cy="150" r="3" fill="#b08d57" opacity=".8"/>
+      <circle cx="100" cy="178" r="3" fill="#b08d57" opacity=".8"/>
+    </svg>
+  </div>
+</section>
+
+<section class="collection" id="collection">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">The Collection</span>
+        <h2>100% Turkish Wool</h2>
+      </div>
+      <p>Select from our premium imported fabrics. Available in 2-piece and 3-piece sets.</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Bosphorus</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Charcoal Wool</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Anatolian</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Midnight Navy</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Istanbul</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Black Wool</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Cappadocia</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Olive Herringbone</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Ankara</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Grey Wool</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Izmir</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Light Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Antalya</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Deep Blue</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Troy</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Brown Tweed</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Bodrum</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Summer Beige</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Ephesus</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Navy Pinstripe</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Konya</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Charcoal Pinstripe</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Mardin</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Classic Black</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Trabzon</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Slate Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Gaziantep</h3><span class="card-price">KES 25k</span></div>
+        <p class="card-desc">2-Piece · Textured Grey</p>
+      </article>
+      <article class="card">
+        <div class="card-visual"><svg viewBox="0 0 200 300" fill="none"><path d="M100 30 C85 30 72 40 62 48 L28 68 L18 140 L34 290 L166 290 L182 140 L172 68 L138 48 C128 40 115 30 100 30Z" fill="currentColor"/></svg></div>
+        <div class="card-meta"><h3>The Van</h3><span class="card-price"><span class="old-price">KES 35k</span>KES 30k</span></div>
+        <p class="card-desc">3-Piece · Midnight Blue</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="craft" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">The Process</span>
+        <h2>How Made-to-Measure Works</h2>
+      </div>
+      <p>No shop visits required. We bring the perfect fit to your doorstep.</p>
+    </div>
+    <div class="craft-grid">
+      <div class="craft-item">
+        <span class="num">01</span>
+        <h3>Choose & Measure</h3>
+        <p>Select your suit. If you know your exact sizes (Height, Waist, Coat), you provide them. If you only know your waist size, we will recommend the best fit for you using our chart below.</p>
+      </div>
+      <div class="craft-item">
+        <span class="num">02</span>
+        <h3>The Tailoring</h3>
+        <p>We take your measurements (or your recommended size) and ensure the suit is perfectly adjusted to your body shape before it is finalized.</p>
+      </div>
+      <div class="craft-item">
+        <span class="num">03</span>
+        <h3>Home or Office Delivery</h3>
+        <p>Once perfectly tailored, your 100% Turkish wool suit is delivered directly to your home or workplace.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sizing-section" id="sizing">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Sizing Guide</span>
+        <h2>Don't know your exact coat size?</h2>
+      </div>
+      <p>If you only know your waist size, use this chart to find your matching coat size. We will tailor it to fit perfectly.</p>
+    </div>
+    <table class="size-table">
+      <thead>
+        <tr>
+          <th>Your Waist Size</th>
+          <th>Recommended Coat Size</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>32</td><td>42</td></tr>
+        <tr><td>34</td><td>46</td></tr>
+        <tr><td>36</td><td>50</td></tr>
+        <tr><td>38</td><td>54</td></tr>
+        <tr><td>40</td><td>58</td></tr>
+        <tr><td>42</td><td>62</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="order">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <span class="eyebrow">Order Now</span>
+        <h2>Place your order</h2>
+        <p>Fill out the form below. When you click submit, it will automatically open WhatsApp so we can finalize your order and delivery details.</p>
+        <form id="bookingForm" novalidate style="margin-top:2rem;">
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Full Name</label>
+              <input id="name" name="name" type="text" required placeholder="Your name" />
+            </div>
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" required placeholder="e.g. 0712345678" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="address">Delivery Address (Home or Office)</label>
+            <input id="address" name="address" type="text" required placeholder="Where should we deliver?" />
+          </div>
+          <div class="field">
+            <label for="suit">Which Suit?</label>
+            <select id="suit" name="suit">
+              <option>The Bosphorus (3-Piece · KES 30k)</option>
+              <option>The Anatolian (2-Piece · KES 25k)</option>
+              <option>The Istanbul (3-Piece · KES 30k)</option>
+              <option>The Cappadocia (2-Piece · KES 25k)</option>
+              <option>Other / Custom</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="measurements">Sizes (Exact measurements OR just your waist size)</label>
+            <textarea id="measurements" name="measurements" required placeholder="e.g. I am a waist 36, height 5'10. OR: Waist 36, Coat 50, Height 5'
